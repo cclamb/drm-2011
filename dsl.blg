@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: dsl.aux
+The style file: abbrv.bst
+Database file #1: bib/emr.bib
+Database file #2: bib/drm.bib
+Database file #3: bib/ctrl.bib
+Warning--string name "december" is undefined
+--line 152 of file bib/ctrl.bib
+Warning--string name "december" is undefined
+--line 164 of file bib/ctrl.bib
+Warning--string name "december" is undefined
+--line 176 of file bib/ctrl.bib
+Warning--string name "december" is undefined
+--line 188 of file bib/ctrl.bib
+Warning--string name "december" is undefined
+--line 200 of file bib/ctrl.bib
+Database file #4: bib/readings.bib
+Warning--to sort, need author or key in ctrl:amazon-cloud-watch
+Warning--to sort, need author or key in ctrl:amazon-sla
+Warning--to sort, need author or key in ctrl:rackspace-sla
+Warning--to sort, need author or key in ctrl:amazon-auto-scale
+Warning--to sort, need author or key in ctrl:satcompetition
+Warning--empty booktitle in ctrl:google-arch
+Warning--empty year in ctrl:lamb-MCCCS
+You've used 28 entries,
+            2118 wiz_defined-function locations,
+            656 strings with 8696 characters,
+and the built_in function-call counts, 9064 in all, are:
+= -- 871
+> -- 432
+< -- 5
++ -- 175
+- -- 146
+* -- 644
+:= -- 1459
+add.period$ -- 82
+call.type$ -- 28
+change.case$ -- 156
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 343
+empty$ -- 750
+format.name$ -- 146
+if$ -- 1940
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 22
+newline$ -- 137
+num.names$ -- 47
+pop$ -- 201
+preamble$ -- 1
+purify$ -- 129
+quote$ -- 0
+skip$ -- 238
+stack$ -- 0
+substring$ -- 464
+swap$ -- 68
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 106
+warning$ -- 7
+while$ -- 71
+width$ -- 30
+write$ -- 298
+(There were 12 warnings)

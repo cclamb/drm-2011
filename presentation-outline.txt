@@ -1,0 +1,24 @@
+
+Intro:
+
+what we do:
+* usage management: defn, relate to access ctrl, drm
+
+Applied to PMR:
+* PMR, mashable (mix w. other data, keeping licensure, fact/record decomp?), controllable (control how information is used & edited, roles impact here), available (?)
+* New Models, cover one later (broker model)
+
+UM Primer:
+* UMM, Context, Policy
+* Different evaluation logics in Policy
+* Ontology required by UMM, Policy
+
+Application:
+* Go over example system (data broker)
+* Describe Ontology
+* Describe example Ontology
+
+Conclusion:
+- Issues
+
+
