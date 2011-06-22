@@ -21,12 +21,22 @@ This has specific implications on both the DSL syntax and performance profile.  
 
 Figure \ref{fig:model:use-cases} shows the primary system actors we have identified as well as the use cases with which they will be involved.  Actors include:
 \begin{itemize}
-\item \textit{Context Author}.
-\item \textit{Policy Author}.
-\item \textit{Combinator}.
-\item \textit{Content Owner}.
-\item \textit{Evaluator}.
+\item \textit{Context Author}.  The context author is responsible for defining the context in which a policy will be applied to a given resource.  The context itself defines the environment in which the policy executes, the resource to which the policy is applied, and the subject that attempts to use the resource.
+\item \textit{Policy Author}.  The policy author creates a policy to control the use of a subject defined in the policy context.
+\item \textit{Combinator}. A system element, generally.  A combinator in this context combines two or more policies into a single composite policy.
+\item \textit{Content Owner}.  The owner of a protected resource.
+\item \textit{Evaluator}. Another system element, an evaluator evaluates a given policy with a specific context.
 \end{itemize}
+
+When a context author creates a context, that author compiles the elements of that context for use both at policy creation and policy execution.  When the policy is initially created, the resource is the only defined element.  Generally both the subject, representing the eventual user, and the environment, containing information describing the evaluation environment, are only defined at the classifier level.  That is to say, they both are defined, but individual properties have yet to be assigned.
+
+Creating a policy is an activity undertaken by either a policy author or a combinator.  This step requires a \textit{declared} (but not \textit{defined}) context.  This is also undertaken in tandem with some kind of policy specification that describes roughly what the policy should manage and how it should be managed.  In the ontology we have defined, this is the step at which the author defines the various constraints, activities, restricted activities, and obligations.  Creating a new policy is precisely what it describes - creating a brand new policy applied to a context.  Creating a composite policy, on the other hand, involves creating a new derivative policy from two or more previously existing policies.
+
+The included cases define policy, assemble policy, and verify policy are common development steps through which the policy is essentially designed, developed, and then tested against a context.
+
+Once a policy has been created, the content owner can then associate that policy with a resource, essentially instantiating the resource in the associated context.
+
+Finally, a policy is evaluated by an evaluator, a system actor, after creation and association with a resource.  At this point, the context has a fully instantiated context, with defined resource, subject, and environmental elements.
 
 \subsection{Domain Ontology}
 
