@@ -1,2 +1,41 @@
 \subsection{Creative Commons}\label{sec:model-cc}
-Creative commons applied
+
+The Creative Commons\ref{ref:CC} is a nonprofit organization that works to
+increase the amount of creativity available in ``the commons''.  It provides
+free, easy-to-use legal tools that provide a simple, standardized way to
+pre-clear usage rights to creative work for copyright owners.  It lets
+copyright holders easily change from default of ``all rights reserved'' to
+``some rights reserved''.
+
+In this section, we use our DSL to implement a policy that can be used with
+Creative Commons licensed content, covering all seven of the main Creative
+Commons license types: 1) Public Domain, 2) Attribution, 3) Attribution, Share-Alike,
+4) Attribution, No-Derivatives, 5) Attribution, Non-Commercial,
+6) Attribution, Non-Commercial, Share-Alike,
+7) Attribution, Non-Commercial, No-Derivatives.
+
+%\begin{enumerate}
+  %\item Public Domain
+  %\item Attribution
+  %\item Attribution, Share-Alike
+  %\item Attribution, No-Derivatives
+  %\item Attribution, Non-Commercial
+  %\item Attribution, Non-Commercial, Share-Alike
+  %\item Attribution, Non-Commercial, No-Derivatives
+%\end{enumerate}
+
+First, we create an activity.  This activity represents sharing a Creative
+Commons licensed asset.
+
+\lstinputlisting[]{content/code/cc/activity.rb}
+
+Next, we define constraints on this share activity.  There are four such
+constraints in Creative Commons: attribution, commercial use, derivative work,
+and share-alike.
+
+\lstinputlisting[]{content/code/cc/constraints.rb}
+
+Finally, we define the restricted activities, covering all 7 basic license
+types.
+
+\lstinputlisting[]{content/code/cc/restrictedactivities.rb}
