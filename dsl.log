@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  21 JUN 2011 06:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  29 JUN 2011 06:41
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -246,42 +246,43 @@ uam
 <./images/use-cases.png, id=11, 107.9232pt x 162.3666pt>
 File: ./images/use-cases.png Graphic file (type png)
 
-<use ./images/use-cases.png>
-<./images/ontology.png, id=12, 105.0324pt x 56.8524pt>
+<use ./images/use-cases.png> [2]
+<./images/ontology.png, id=16, 119.4864pt x 95.3964pt>
 File: ./images/ontology.png Graphic file (type png)
 
-<use ./images/ontology.png>
-<./images/lifecycle.png, id=13, 160.4394pt x 95.3964pt>
+<use ./images/ontology.png> [3 <./images/use-cases.png (PNG copy)>]
+<./images/lifecycle.png, id=20, 160.4394pt x 95.3964pt>
 File: ./images/lifecycle.png Graphic file (type png)
 
 <use ./images/lifecycle.png>
-<./images/language-components.png, id=14, 90.5784pt x 65.043pt>
+<./images/language-components.png, id=21, 90.5784pt x 65.043pt>
 File: ./images/language-components.png Graphic file (type png)
 
 <use ./images/language-components.png>) (./content/language.tex)
-(./content/applied.tex [2] (./content/creative-commons.tex) (./content/xrml.tex
-) (./content/odrl.tex)) (./content/conclusion.tex) (./content/references.tex
+(./content/applied.tex (./content/creative-commons.tex) (./content/xrml.tex)
+(./content/odrl.tex)) (./content/conclusion.tex) (./content/references.tex
 No file dsl.bbl.
-) [3 <./images/use-cases.png (PNG copy)> <./images/ontology.png (PNG copy)> <./
-images/lifecycle.png (PNG copy)> <./images/language-components.png (PNG copy)>]
-(./dsl.aux) ) 
+) [4 <./images/ontology.png (PNG copy)> <./images/lifecycle.png (PNG copy)> <./
+images/language-components.png (PNG copy)>] (./dsl.aux) ) 
 Here is how much of TeX's memory you used:
- 2247 strings out of 495061
- 25845 string characters out of 1182622
+ 2253 strings out of 495061
+ 25890 string characters out of 1182622
  83129 words of memory out of 3000000
- 5360 multiletter control sequences out of 15000+50000
- 47315 words of font info for 64 fonts, out of 3000000 for 9000
+ 5361 multiletter control sequences out of 15000+50000
+ 50251 words of font info for 69 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  39i,10n,26p,1166b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-texlive/fonts/type1/urw/helveti
-c/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></us
-r/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
-Output written on dsl.pdf (3 pages, 177019 bytes).
+{/usr/share/texmf-texl
+ive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+csc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-texlive/f
+onts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/he
+lvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
+Output written on dsl.pdf (4 pages, 212430 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

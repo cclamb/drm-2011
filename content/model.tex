@@ -47,14 +47,35 @@ Based on our use cases, we know the ontology contains a \textit{context}, some k
 
 This understanding leads us to the Ontology view in Figure \ref{fig:model:ontology}.  Of special note, the specific policy sub-ontology is represented as a realization of a more general \textit{policy ontology} type.  Likewise, the logic used to reason over the policy elements is propositional logic.  Both of these can change within this model to allow for inclusion of more complex policy systems and powerful reasoning capabilities.
 
-
-
 \begin{figure}[!t]
 \centering
 \includegraphics[width=3in]{ontology}
 \caption{Basic Language Ontology}
 \label{fig:model:ontology}
 \end{figure}
+
+Primary elements within this ontology are:
+\begin{itemize}
+\item \textit{Runtime}.  This is the system that manages use of a given \textit{resource} by a \textit{subject} in accordance with a \textit{policy}.  It is responsible for providing and managing context elements, controlling policies and licenses, and handling requests from subjects.  Realizations of this system must be cross platform to support distributed use as well.
+\item \textit{Context}.  The context describes the operating environment of the policy.  This information must be available at runtime, and parts of it must be understood when the policy is initially designed.  In order to effectively control use of a given artifact, the parameters that artifact can be used under must be understood when the policy is created and must be read when that policy is evaluated.
+\begin{itemize}
+\item \textit{Environment}.  The environment in which a given policy is evaluated.  This must be understood in order to constrain the conditions where a policy will allow or disallow artifact access.  This is essentially an associative array, where the keys are specific expected properties of a given environment.
+\item \textit{Resource}.  A resource is the artifact over which the policy controls use.  This can be any type of artifact whatsoever, ranging from documents to media files to streaming data.  A resource may also have arbitrary properties like an associated URI, a canonical name, a MIME type, or creation metadata.
+\item \textit{Subject}.  Subjects use a given resource.  Acceptable use is described by the policy.
+\end{itemize}
+\item \textit{Policy}.
+\item \textit{Policy Ontology (\textsc{Abstract})}.
+\item \textit{Simple Ontology}.
+\begin{itemize}
+\item \textit{Obligation}.
+\item \textit{Constraint}.
+\item \textit{Activity}.
+\item \textit{Restricted Activity}.
+\end{itemize}
+\item \textit{Policy Logic (\textsc{Abstract})}.
+\item \textit{Propositional Logic}.
+\item \textit{License}.
+\end{itemize}
 
 \subsection{Envisioned Lifecycle}
 
