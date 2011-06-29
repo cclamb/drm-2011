@@ -38,7 +38,16 @@ Once a policy has been created, the content owner can then associate that policy
 
 Finally, a policy is evaluated by an evaluator, a system actor, after creation and association with a resource.  At this point, the context has a fully instantiated context, with defined resource, subject, and environmental elements.
 
+Now we have a general understanding of the expected use of a given policy, and have defined the expected roles.  With this in place, we begin to look at the elements the DSL should have to allow it to express the use cases we expect we need to support as the next step in refining our understanding of what this DSL should look like.
+
 \subsection{Domain Ontology}
+Our domain ontology will be the foundation of our DSL.  It will allow us to begin to understand the various language elements and how they are related, leading us to an eventual syntax to represent these classifiers and relationships.  Not understanding this structure well, or developing a structure that does not support our defined use cases will lead us to develop a DSL that inadequately supports our expected use.
+
+Based on our use cases, we know the ontology contains a \textit{context}, some kind of policy-specific sub-ontology, and a logic engine that can act over that sub-ontology.  Based on our current understanding of our needs, the sub-ontology contains \textit{obligations} and \textit{constraints} applied to \textit{activities}.  We use simple propositional logic to reason over the policy elements.
+
+This understanding leads us to the Ontology view in Figure \ref{fig:model:ontology}.  Of special note, the specific policy sub-ontology is represented as a realization of a more general \textit{policy ontology} type.  Likewise, the logic used to reason over the policy elements is propositional logic.  Both of these can change within this model to allow for inclusion of more complex policy systems and powerful reasoning capabilities.
+
+
 
 \begin{figure}[!t]
 \centering
