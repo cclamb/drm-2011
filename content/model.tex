@@ -63,19 +63,21 @@ Primary elements within this ontology are:
 \item \textit{Resource}.  A resource is the artifact over which the policy controls use.  This can be any type of artifact whatsoever, ranging from documents to media files to streaming data.  A resource may also have arbitrary properties like an associated URI, a canonical name, a MIME type, or creation metadata.
 \item \textit{Subject}.  Subjects use a given resource.  Acceptable use is described by the policy.
 \end{itemize}
-\item \textit{Policy}.
-\item \textit{Policy Ontology (\textsc{Abstract})}.
-\item \textit{Simple Ontology}.
+\item \textit{Policy}.  A policy describes the conditions of use for a given resource.  In our example, this includes information on acceptable contexts and subjects, as well as obligations and constraints.  Policies can be configured in this DSL to use arbitrary evaluators.  This allows users to implement specific policy semantics tailored to their domain if needed, though they are free to use packaged syntax evaluators if those evaluators fit their needs. 
+\item \textit{Policy Ontology (\textsc{Abstract})}.  As policies can implement arbitrary semantics, they can be based on an ontology tailored to the needs for the particular policy system.  For example, this DSL currently implements obligations and constraints restricting defined activities.  Other domains may need to use more descriptive semantics, perhaps addressing causality or ordering.
+\item \textit{Simple Ontology}.  The ontology currently used for policy development and packaged with the DSL.
 \begin{itemize}
-\item \textit{Obligation}.
-\item \textit{Constraint}.
-\item \textit{Activity}.
-\item \textit{Restricted Activity}.
+\item \textit{Obligation}.  An obligation describes something that must have occurred or must occur in the future for a restricted activity to be performed.  For example, a media stream may wish to obligate users to purchase access to that stream on the third access. 
+\item \textit{Constraint}.  A constraint generally constrains the a restricted activity.  This could be as simple as limiting use to a single identifiable subject or as complex as limiting use based on time and date, user identity, and geographic location.
+\item \textit{Activity}.  A general activity is something a subject would wish to do in association with an artifact.  It describes how a \textit{subject} would use a \textit{resource} in an unrestricted way.
+\item \textit{Restricted Activity}.  When an activity is embellished with constraints or obligation, it becomes restricted.
 \end{itemize}
-\item \textit{Policy Logic (\textsc{Abstract})}.
-\item \textit{Propositional Logic}.
-\item \textit{License}.
+\item \textit{Policy Logic (\textsc{Abstract})}.  As the general policy ontology can be changed to reflect different policy conditions, so to can the logic used to evaluate that policy change.  Recognizing this logic as a first order system element helps facilitate that substitution.
+\item \textit{Propositional Logic}.  The logic currently used for policy evaluation.
+\item \textit{License}.  An instance of a defined policy that would be applied to a resource.
 \end{itemize}
+
+Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{Policy Ontology} and \textit{Policy Logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
 
 \subsection{Envisioned Lifecycle}
 
