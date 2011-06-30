@@ -77,7 +77,11 @@ Primary elements within this ontology are:
 \item \textit{License}.  An instance of a defined policy that would be applied to a resource.
 \end{itemize}
 
-Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{Policy Ontology} and \textit{Policy Logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
+Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{policy ontology} and \textit{policy logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
+
+We have also separated the definition of \textit{activities} from \textit{restricted activities}.  This separation of concerns allows policy developers to define a single activity which can then be reused across a large number of restricted activities based on specific varying constraints.  For example, if I have a write activity, I can constrain that activity in slightly different ways to create a relatively large number of related restricted activities.  I could restrict write by geographic area, by subject identification, by date and time, or by having contributed to some political cause, creating four restricted activities from the same base activity.
+
+The base domain model however, based on contextual elements, policies, and licenses does not change.  This stability allows for ease of runtime integration as it hides any policy evaluation-specific changes.  As long as a given logic and policy ontology is delivered with a given policy, the policy evaluation runtime will be able to evaluate that policy against resources and subjects in a given environment.
 
 \subsection{Envisioned Lifecycle}
 
