@@ -1,0 +1,85 @@
+# Example Creative Commons policy file
+# See non-DSL example of this at:
+# https://github.com/bohnsack/CreativeCommonsPresentation
+
+
+# First we define the activity.  For Creative Commons, there's one only
+# activity: "share"
+#############################################################################
+share_activity = activity(:share) do
+  # TODO: it's not clear what should happen in this block, so for now, we just
+  # return true
+  true
+end
+
+# Next, we define constraints on this share activity.  There are four such
+# constraints in Creative Commons: 1) attribution, 2) commercial use, 3)
+# derivative work, 4) share-alike
+#############################################################################
+
+# 1) Attribution
+attribution_constraint = constraint(:share) do
+  # TODO: For now, we just return true
+  true
+end
+
+# 2) Commercial Use
+non_commercial_use_constraint = constraint(:share) do
+  # TODO: For now, we just return true
+  true
+end
+
+# 3) Derivative Work
+non_derivative_work_constraint = constraint(:share) do
+  # TODO: For now, we just return true
+  true
+end
+
+# 4) Share-Alike
+share_alike_constraint = constraint(:share) do
+  # TODO: For now, we just return true
+  true
+end
+
+# Finally, we define the restricted activities.  This should cover all 7 basic
+# CC license types:
+#  1) Public Domain
+#  2) Attribution
+#  3) Attribution, Share-Alike
+#  4) Attribution, No-Derivatives
+#  5) Attribution, Non-Commercial
+#  6) Attribution, Non-Commercial, Share-Alike
+#  7) Atribution, Non-Commercial, No-Derivatives
+#############################################################################
+
+# 1) TODO: Don't know how to express Public Domain, but maybe don't need to
+
+# 2) Attribution
+share_by_work = restrict share_activity do
+  with attribution_constraint
+end
+
+# 3) Attribution, Share-Alike
+share_by_sa_work = restrict share_activity do
+  with attribution_constraint, share_alike_constraint
+end
+
+# 4) Attribution, No-Derivatives
+share_by_nd_work = restrict share_activity do
+  with attribution_constraint, non_derivative_work_constraint
+end
+
+# 5) Attribution, Non-Commercial
+share_by_nc_work = restrict share_activity do
+  with attribution_constraint, non_commercial_use_constraint
+end
+
+# 6) Attribution, Non-Commercial, Share-Alike
+share_by_nc_sa_work = restrict share_activity do
+  with attribution_constraint, non_commercial_use_constraint, share_alike_constraint
+end
+
+# 7) Atribution, Non-Commercial, No-Derivatives
+share_by_nc_nd_work = restrict share_activity do
+  with attribution_constraint, non_commercial_use_constraint, non_derivative_work_constraint
+end

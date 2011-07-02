@@ -1,11 +1,21 @@
 \documentclass{acm_proc_article-sp}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{listings}
+\usepackage{courier}
 
 % Include PDF graphics, configure our images directory, and specify image types.
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+
+% Style listings
+\lstset{%rulesepcolor=\color{Gray},
+        frame=single,                        	% Shadow box frame around code
+        basicstyle=\scriptsize\ttfamily,        % Use small true type font
+        showstringspaces=false,                 % Don't put marks in string spaces
+        morecomment=[l][\color{Blue}]{...},     % Line continuation (...) like blue comment
+}
 
 \begin{document}
 
