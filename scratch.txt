@@ -1,0 +1,38 @@
+Original author block:
+
+
+\numberofauthors{5}
+
+\author{
+\alignauthor
+Christopher C. Lamb\\
+       \affaddr{University of New Mexico}\\
+       \affaddr{Department of Electrical and Computer Engineering}\\
+       \affaddr{Albuquerque, NM 87131-0001}\\
+       \email{cclamb@ece.unm.edu}
+\alignauthor
+Pramod A. Jamkhedkar\\
+       \affaddr{University of New Mexico}\\
+       \affaddr{Department of Electrical and Computer Engineering}\\
+       \affaddr{Albuquerque, NM 87131-0001}\\
+       \email{pramod54@ece.unm.edu}
+\alignauthor
+Viswanath Nandina\\
+       \affaddr{University of New Mexico}\\
+       \affaddr{Department of Electrical and Computer Engineering}\\
+       \affaddr{Albuquerque, NM 87131-0001}\\
+       \email{vishu@ece.unm.edu}
+\and
+\alignauthor
+Mathew P. Bohnsack\\
+       \affaddr{University of New Mexico}\\
+       \affaddr{Department of Electrical and Computer Engineering}\\
+       \affaddr{Albuquerque, NM 87131-0001}\\
+       \email{mbohnsack@ece.unm.edu}
+\alignauthor
+Gregory L. Heileman\\
+       \affaddr{University of New Mexico}\\
+       \affaddr{Department of Electrical and Computer Engineering}\\
+       \affaddr{Albuquerque, NM 87131-0001}\\
+       \email{heileman@ece.unm.edu}
+}
