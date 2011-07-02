@@ -4,52 +4,47 @@ The style file: abbrv.bst
 Database file #1: bib/drm.bib
 Warning--to sort, need author or key in OMADRM
 Warning--to sort, need author or key in ODRL-req
-Warning--to sort, need author or key in marlin
 Warning--empty author in OMADRM
-Warning--empty author in marlin
-Warning--empty institution in marlin
-Warning--empty author in coral
-Warning--empty institution in coral
 Warning--can't use both author and editor fields in JaHe:08
-You've used 42 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            771 strings with 10757 characters,
-and the built_in function-call counts, 13827 in all, are:
-= -- 1404
-> -- 552
-< -- 17
-+ -- 230
-- -- 178
-* -- 875
-:= -- 2175
-add.period$ -- 132
-call.type$ -- 42
-change.case$ -- 226
+            660 strings with 7866 characters,
+and the built_in function-call counts, 8394 in all, are:
+= -- 855
+> -- 321
+< -- 12
++ -- 134
+- -- 104
+* -- 554
+:= -- 1280
+add.period$ -- 72
+call.type$ -- 23
+change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 595
-empty$ -- 1140
-format.name$ -- 178
-if$ -- 3051
+cite$ -- 27
+duplicate$ -- 374
+empty$ -- 710
+format.name$ -- 104
+if$ -- 1878
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 28
-newline$ -- 215
-num.names$ -- 72
-pop$ -- 276
+int.to.str$ -- 23
+missing$ -- 21
+newline$ -- 118
+num.names$ -- 40
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 176
+purify$ -- 99
 quote$ -- 0
-skip$ -- 436
+skip$ -- 264
 stack$ -- 0
-substring$ -- 737
-swap$ -- 163
-text.length$ -- 17
+substring$ -- 510
+swap$ -- 111
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 166
-warning$ -- 9
-while$ -- 118
-width$ -- 44
-write$ -- 481
-(There were 9 warnings)
+type$ -- 90
+warning$ -- 4
+while$ -- 75
+width$ -- 25
+write$ -- 268
+(There were 4 warnings)
