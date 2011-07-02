@@ -1,53 +1,55 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: dsl.aux
 The style file: abbrv.bst
-Database file #1: bib/emr.bib
-Database file #2: bib/drm.bib
-Database file #3: bib/ctrl.bib
-Database file #4: bib/readings.bib
+Database file #1: bib/drm.bib
 Warning--to sort, need author or key in OMADRM
 Warning--to sort, need author or key in ODRL-req
+Warning--to sort, need author or key in marlin
 Warning--empty author in OMADRM
+Warning--empty author in marlin
+Warning--empty institution in marlin
+Warning--empty author in coral
+Warning--empty institution in coral
 Warning--can't use both author and editor fields in JaHe:08
-You've used 22 entries,
+You've used 42 entries,
             2118 wiz_defined-function locations,
-            655 strings with 7625 characters,
-and the built_in function-call counts, 7931 in all, are:
-= -- 804
-> -- 303
-< -- 11
-+ -- 126
-- -- 98
-* -- 524
-:= -- 1211
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 116
+            771 strings with 10757 characters,
+and the built_in function-call counts, 13827 in all, are:
+= -- 1404
+> -- 552
+< -- 17
++ -- 230
+- -- 178
+* -- 875
+:= -- 2175
+add.period$ -- 132
+call.type$ -- 42
+change.case$ -- 226
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 353
-empty$ -- 674
-format.name$ -- 98
-if$ -- 1772
+cite$ -- 51
+duplicate$ -- 595
+empty$ -- 1140
+format.name$ -- 178
+if$ -- 3051
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 20
-newline$ -- 113
-num.names$ -- 38
-pop$ -- 157
+int.to.str$ -- 42
+missing$ -- 28
+newline$ -- 215
+num.names$ -- 72
+pop$ -- 276
 preamble$ -- 1
-purify$ -- 94
+purify$ -- 176
 quote$ -- 0
-skip$ -- 248
+skip$ -- 436
 stack$ -- 0
-substring$ -- 480
-swap$ -- 103
-text.length$ -- 11
+substring$ -- 737
+swap$ -- 163
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
-warning$ -- 4
-while$ -- 70
-width$ -- 24
-write$ -- 254
-(There were 4 warnings)
+type$ -- 166
+warning$ -- 9
+while$ -- 118
+width$ -- 44
+write$ -- 481
+(There were 9 warnings)
