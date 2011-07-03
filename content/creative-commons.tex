@@ -1,41 +1,87 @@
 \subsection{Creative Commons}\label{sec:model-cc}
 
-The Creative Commons\ref{ref:CC} is a nonprofit organization that works to
-increase the amount of creativity available in ``the commons''.  It provides
-free, easy-to-use legal tools that provide a simple, standardized way to
-pre-clear usage rights to creative work for copyright owners.  It lets
-copyright holders easily change from default of ``all rights reserved'' to
-``some rights reserved''.
-
 In this section, we use our DSL to implement a policy that can be used with
-Creative Commons licensed content, covering all seven of the main Creative
-Commons license types: 1) Public Domain, 2) Attribution, 3) Attribution, Share-Alike,
-4) Attribution, No-Derivatives, 5) Attribution, Non-Commercial,
-6) Attribution, Non-Commercial, Share-Alike,
-7) Attribution, Non-Commercial, No-Derivatives.
+Creative Commons licensed content.  The Creative Commons is a nonprofit
+organization that provides free, easy-to-use legal tools that provide a simple,
+standardized way to pre-clear usage rights to creative works for copyright
+owners.  It gives copyright holders an easy way to license their works in a way
+that leaves ``some rights reserved'' as compared to the ``all rights reserved''
+default.  By providing these legal tools, the Creative Commons hopes to
+increase the amount of creativity available ``in the commons''.
 
-%\begin{enumerate}
-  %\item Public Domain
-  %\item Attribution
-  %\item Attribution, Share-Alike
-  %\item Attribution, No-Derivatives
-  %\item Attribution, Non-Commercial
-  %\item Attribution, Non-Commercial, Share-Alike
-  %\item Attribution, Non-Commercial, No-Derivatives
-%\end{enumerate}
+Seven main license types are defined by Creative Commons:
 
-First, we create an activity.  This activity represents sharing a Creative
-Commons licensed asset.
+\begin{enumerate}
+  \item \emph{Public Domain}:
+
+This license doesn't put any restrictions on how others may remix, tweak, or
+build upon your work.
+
+  \item \emph{Attribution}:
+
+This license lets others distribute, remix, tweak, and build upon your work,
+even commercially, as long as they credit you for the original creation. This
+is the most accommodating of the licenses offered.  It is recommended for
+maximum dissemination and use of licensed materials.
+
+  \item \emph{Attribution, Share-Alike}:
+
+This license lets others remix, tweak, and build upon your work even for
+commercial purposes, as long as they credit you and license their new creations
+under the identical terms.  This license is often compared to free and open
+source software licenses.  All new works based on yours will carry the same
+license, so any derivatives will also allow commercial use.
+
+  \item \emph{Attribution, No-Derivatives}:
+
+This license allows for redistribution, commercial and non-commercial, as long
+as it is passed along unchanged and in whole, with credit to you.
+
+  \item \emph{Attribution, Non-Commercial}:
+
+This license lets others remix, tweak, and build upon your work
+non-commercially, and although their new works must also acknowledge you and be
+non-commercial, they don't have to license their derivative works on the same
+terms.
+
+  \item \emph{Attribution, Non-Commercial, Share-Alike}:
+
+This license lets others remix, tweak, and build upon your work
+non-commercially, as long as they credit you and license their new creations
+under the identical terms.
+
+  \item \emph{Attribution, Non-Commercial, No-Derivatives}:
+
+This license is the most restrictive of the six main licenses, only allowing
+others to download your works and share them with others as long as they credit
+you, but they can't change them in any way or use them commercially.
+\end{enumerate}
+
+Now that we have explained the different Creative Commons license types, what
+they mean, and the restrictions they have, we will create a policy with our DSL
+that represents compliant usage of Creative Commons licensed works.
+
+First, we use our DSL to define an activity.  In Creative Commons there's
+really only one activity --  sharing a Creative Commons licensed work -- so
+this code is fairly simple, defining the \texttt{share} activity.
 
 \lstinputlisting[]{content/code/cc/activity.rb}
 
-Next, we define constraints on this share activity.  There are four such
-constraints in Creative Commons: attribution, commercial use, derivative work,
-and share-alike.
+Next, we define constraints on the \texttt{share} activity.  There are four
+such constraints in Creative Commons, as discussed above: attribution,
+commercial use, derivative work, and share-alike.  This results in four
+constraints defined in our DSL as follows:
 
 \lstinputlisting[]{content/code/cc/constraints.rb}
 
 Finally, we define the restricted activities, covering all 7 basic license
-types.
+types.  For example, in the following code listing, the
+\texttt{share\_by\_work} restricted activity is defined by associating the
+\texttt{attribution} constraint with the \texttt{share} activity. Likewise, the
+\texttt{share\_by\_sa\_work} restricted activity associates the
+\texttt{attribution} and \texttt{share\_alike} constraints with the
+\texttt{share} activity.  Sharing activites for all 7 license types are defined
+similarly, resulting in a policy that allows for sharing all types of Creative
+Commons licensed works, with proper constraints.
 
 \lstinputlisting[]{content/code/cc/restrictedactivities.rb}
