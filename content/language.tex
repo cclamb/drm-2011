@@ -1,9 +1,24 @@
 \section{Language}\label{sec:language}
+This section describes the domain specific language built upon the language model described in Section~\ref{sec:model}. First the deployment of the language is provided that explains how the DSL is operates and is used in usage management systems. This is followed by a detailed example of the syntax and semantics, and major components of the language. Finally, we demonstrate how the language can be extended to include different types of evaluators deploying different types of logics. 
+
+\subsection{Language Operation}
+The use and operation of the DSL for usage management is shown in Figure~\ref{fig:DSL-usage}. The DSL provides a language for specification of contexts and policies as described in the previous section. As shown in the figure, the DSL can incorporate different types of evaluators for expression of different types of usage semantics. A DSL, along with an appropriate evaluator is then used to specify contexts and policies. Users are allowed to choose from different types of evaluators that provide the right type of semantics needed by the users. The policy specification and context specification, described using the DSL is then taken by a Ruby compiler to generate a corresponding context and policy object. In usage management systems, context objects are generated on the client side and maintained within the computing platform. The policy specification is provided by the resource owners, is converted into a policy object. Following this, the policy and context objects interact with each other and operate within a usage management system.  
+
+\subsection{Language Description}
+The language is based on the model description provided in the previous section, and enables specification of the various policy semantics and context descriptions. 
+
+The DSL provides a mechanism for specification of different types of contexts based on the context structure explained in the previous section. A context consists of a set of entities, such as Subject, Resource, and Environment, and each of these entities possess a set of properties. 
 
 
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=3in]{cloud-current}
-%\caption{Single SLA with Control Elements}
-%\label{fig:current-cloud-model}
-%\end{figure}
+\subsection{Langauge Extensions}
+
+The DSL allows inclusion of different types of evaluators that provide users with different sets of usage semantics. The evaluators provide a design space for innovation and extensibility
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{DSL-usage}
+\caption{The role of DSL in usage management systems}
+\label{fig:DSL-usage}
+\end{figure}
