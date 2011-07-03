@@ -36,3 +36,15 @@ Gregory L. Heileman\\
        \affaddr{Albuquerque, NM 87131-0001}\\
        \email{heileman@ece.unm.edu}
 }
+
+
+Language components skeleton (if needed)
+
+\subsection{Language Components}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{language-components}
+\caption{Language Elements}
+\label{fig:model:language-components}
+\end{figure}

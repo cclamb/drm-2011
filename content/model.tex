@@ -88,12 +88,6 @@ Current usage semantics package various evaluators (specifically constraint and 
 \item \textit{Restricted Activity}.  When an activity is embellished with constraints or obligation, it becomes restricted.
 \end{itemize}
 
-Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{policy ontology} and \textit{policy logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
-
-We have also separated the definition of \textit{activities} from \textit{restricted activities}.  This separation of concerns allows policy developers to define a single activity which can then be reused across a large number of restricted activities based on specific varying constraints.  For example, if I have a write activity, I can constrain that activity in slightly different ways to create a relatively large number of related restricted activities.  I could restrict write by geographic area, by subject identification, by date and time, or by having contributed to some political cause, creating four restricted activities from the same base activity.
-
-The base domain model however, based on contextual elements, policies, and licenses does not change.  This stability allows for ease of runtime integration as it hides any policy evaluation-specific changes.  As long as a given logic and policy ontology is delivered with a given policy, the policy evaluation runtime will be able to evaluate that policy against resources and subjects in a given environment.  In essense, this is a layered model where the context and policy elements compose the user interoperability layer while policies and policy logics form a more dynamic policy expression layer.  This way, resource users have a stable runtime view of policies and policy managed resources, while policy and context developers have the flexibility to implement policies at arbitrary levels of expressibility.
-
 \begin{figure}[!t]
 \centering
 \includegraphics[width=2.5in]{usage-semantics}
@@ -101,7 +95,14 @@ The base domain model however, based on contextual elements, policies, and licen
 \label{fig:model:usage-semantics}
 \end{figure}
 
+Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{policy ontology} and \textit{policy logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
+
+We have also separated the definition of \textit{activities} from \textit{restricted activities}.  This separation of concerns allows policy developers to define a single activity which can then be reused across a large number of restricted activities based on specific varying constraints.  For example, if I have a write activity, I can constrain that activity in slightly different ways to create a relatively large number of related restricted activities.  I could restrict write by geographic area, by subject identification, by date and time, or by having contributed to some political cause, creating four restricted activities from the same base activity.
+
+The base domain model however, based on contextual elements, policies, and licenses does not change.  This stability allows for ease of runtime integration as it hides any policy evaluation-specific changes.  As long as a given logic and policy ontology is delivered with a given policy, the policy evaluation runtime will be able to evaluate that policy against resources and subjects in a given environment.  In essense, this is a layered model where the context and policy elements compose the user interoperability layer while policies and policy logics form a more dynamic policy expression layer.  This way, resource users have a stable runtime view of policies and policy managed resources, while policy and context developers have the flexibility to implement policies at arbitrary levels of expressibility.
+
 \subsection{Envisioned Lifecycle}
+Also important to note, the primary artifacts generated within a typical lifecycle include a \textit{context specification} (which eventually becomes a \textit{context}) and a policy specification (eventually becoming a policy).  Two of the three actors work on specification development.  The context specification must be developed prior to a policy specification or policy as it contains not only the ontology describing the environment, resources, and subjects (and thier relationships), it also describes the availability of these elements.  The policy designer cannot develop a policy specification without a detailed understanding of the ontological elements in the domain of the policies he intends to support.  Likewise, the policy author cannot create a policy until the policy specification is in place.
 
 \begin{figure}[!t]
 \centering
@@ -110,11 +111,6 @@ The base domain model however, based on contextual elements, policies, and licen
 \label{fig:model:lifecycle}
 \end{figure}
 
-\subsection{Language Components}
+Policies and contexts have slightly different lifecycles however.  A policy, on one hand, is created by a policy author and associated with a resource according to some kind of policy specification.  A context, on the other, while specified first, is instantiated last.  The context is partially instantiated when the policy author originally associated a resource with a given policy.  Likewise, the eventual user becomes the subject in the context.  Finally, the usage management runtime eventually creates the rest of the context, filling the environment with values as needed for evaluation in tandem with the policy.  We illustrate this expected lifecycle in Figure \ref{fig:model:lifecycle}.
 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=2.5in]{language-components}
-\caption{Language Elements}
-\label{fig:model:language-components}
-\end{figure}
+At this point, we have defined the primary elements in a policy lifecycle according to the usage management model we have established.  Furthermore, we have established the primary domain elements associated with our identified usage semantics, as well as key use cases for the system.  We have also located areas of heavy use as well as areas of low use within the domain model, so we have clear targets for our optimization efforts.  With this detailed understanding of this system, and an understanding of clear extension points, we could begin to implement the DSL and the system required to evaluate it.
