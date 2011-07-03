@@ -52,9 +52,9 @@ under the identical terms.
 
   \item \emph{Attribution, Non-Commercial, No-Derivatives}:
 
-This license is the most restrictive of the six main licenses, only allowing
-others to download your works and share them with others as long as they credit
-you, but they can't change them in any way or use them commercially.
+This license is the most restrictive of the licenses, only allowing others to
+download your works and share them with others as long as they credit you, but
+they can't change them in any way or use them commercially.
 \end{enumerate}
 
 Now that we have explained the different Creative Commons license types, what
@@ -74,13 +74,13 @@ constraints defined in our DSL as follows:
 
 \lstinputlisting[]{content/code/cc/constraints.rb}
 
-Finally, we define the restricted activities, covering all 7 basic license
+Finally, we define the restricted activities, covering all seven basic license
 types.  For example, in the following code listing, the
 \texttt{share\_by\_work} restricted activity is defined by associating the
 \texttt{attribution} constraint with the \texttt{share} activity. Likewise, the
 \texttt{share\_by\_sa\_work} restricted activity associates the
 \texttt{attribution} and \texttt{share\_alike} constraints with the
-\texttt{share} activity.  Sharing activites for all 7 license types are defined
+\texttt{share} activity.  Sharing activites for all seven license types are defined
 similarly, resulting in a policy that allows for sharing all types of Creative
 Commons licensed works, with proper constraints.
 
