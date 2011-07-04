@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  3 JUL 2011 01:26
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  4 JUL 2011 11:38
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -279,38 +279,36 @@ Overfull \hbox (12.94499pt too wide) in paragraph at lines 6--7
  []
 
 [5 <./images/lifecycle.png (PNG copy)> <./images/language-components.png (PNG c
-opy)> <./images/DSL-usage.pdf>]) (./content/applied.tex
+opy)> <./images/DSL-usage.pdf>] [6] [7]) (./content/applied.tex
 (./content/creative-commons.tex) (./content/xrml.tex) (./content/odrl.tex))
 (./content/conclusion.tex) (./content/references.tex
 No file dsl.bbl.
-) [6] (./dsl.aux) ) 
+) [8
+
+] (./dsl.aux) ) 
 Here is how much of TeX's memory you used:
- 2290 strings out of 493848
- 26990 string characters out of 3149207
+ 2274 strings out of 493848
+ 26859 string characters out of 3149207
  85329 words of memory out of 3000000
- 5482 multiletter control sequences out of 15000+200000
- 57447 words of font info for 83 fonts, out of 3000000 for 9000
+ 5476 multiletter control sequences out of 15000+200000
+ 51387 words of font info for 70 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 39i,10n,26p,1612b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.
-enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
-b></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
-</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+ 39i,10n,26p,1617b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
 r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
-texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
-xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texl
-ive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
-e/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2009/
-texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2009/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (6 pages, 347228 bytes).
+local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
+al/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
+/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
+exlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
+2009/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2009/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on dsl.pdf (8 pages, 314537 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
