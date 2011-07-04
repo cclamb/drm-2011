@@ -1,0 +1,27 @@
+<rights>
+  <asset> 
+    <context>
+      <uid>10.00000/content/musiclib/mus-000001</uid>
+    </context>
+  </asset>
+  <permission> 
+    <listen>
+      <constraint>
+        <devices>'MSWindows'</devices>
+      </constraint>
+      <condition>
+        <constraint>
+          <country>'US'</country>
+        </constraint>
+      </condition>
+    </listen>
+    <requirement>
+      <prepay>
+        <payment>
+          <currency>USD</currency>
+          <amount>15.00</amount>
+        </payment>
+      </prepay>
+    </requirement>
+  </permission>
+</rights>

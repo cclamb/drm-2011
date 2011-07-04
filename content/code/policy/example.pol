@@ -1,0 +1,23 @@
+a1 : activity (listen)
+
+c1 : constraint do 
+      {(country='US')V(devices='MSWIndows')}
+      
+ra1 : restrict a1 do
+       with c1
+      end
+
+a2 : activity (payment)
+
+c2 : constraint do
+      {(amount='15.00')V(currency='USD')}
+      
+ra2 : restrict a2 do
+       with c2
+      end
+      
+policy1 = policy ra1,ra2 do
+            permit ra1 do
+                when ra2
+            end
+          end

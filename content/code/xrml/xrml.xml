@@ -1,0 +1,28 @@
+<license>
+  <grantGroup>
+    <principal>User</principal>   
+    <grant>  
+      <rights>  
+        <listen>  
+          <resource>
+            <uid>10.00000/content/musiclib/mus-000001</uid>
+          </resource>
+          <condition>
+            <country>'US'</country>
+            <devices>'MSWindows'</devices>
+            <grant>
+              <rights>
+                <payment> 
+                  <condition>
+                    <amount>15.00</amount>
+                 		<currency>USD</currency>
+               		</condition>
+                </payment>
+              </rights>
+            </grant>
+          </condition>
+        </listen>
+      </rights> 
+    </grant>
+  </grantGroup>
+</license>

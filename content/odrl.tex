@@ -1,2 +1,25 @@
 \subsection{ODRL}\label{sec:model-odrl}
-ODRL applied
+ODRL provides the necessary semantics for Digital Rights Management expressions in an open and trusted environment. By analyzing the ODRL language we can show that it can be mapped to our framework. In the ODRL Expression language there are different models. We are interested in mapping the ODRL Permission model, Constraint model, Requirement model, Condition model and Context model. This section will explain how we map these models to our framework.
+
+Permission model in ODRL contains requirements and in our framework we call those obligations. Essentially they both mean the same thing but with different nomenclatures.
+
+Next phase is about constraint model .In our framework we talk about activities and constraints. So if we define an activity and add constraint to it, we get a restricted activity. This restricted activity can be an obligation or permission. While carrying out these permissions, necessary steps should be taken to maintain the restrictions. On the other hand in ODRL constraints are directly associated with the permissions where constrains are laid directly over the permissions.
+
+The next part talks about the condition model. ODRL condition model states that if any condition is satisfied then related permission is not granted. In our framework, we can easily express this idea within the context itself.
+
+Last part is about context model. If we take into account the context model in ODRL, each and every entity has its own independent context whereas in our framework all the entities lie inside a common context.
+
+To demonstrate the mapping between the ODRL model and our framework, we take a scenario and express it as an ODRL license and then create an equivalent DSL. Consider a scenario where a user wants to listen to music from an online music library. To get access to the library the user has to pay the amount of \$15. The music file can only be played on a windows based device within United States.
+
+%==> The ODRL License (place the ODRL XML file here and this a heading)
+\lstinputlisting[]{content/code/odrl/odrl.xml}
+
+The equivalent DSL would look like the following:
+
+\lstinputlisting[]{content/code/policy/example.pol}
+
+In DSL the first activity is listen which is bounded by the constraint (c1) that the user can listen to the music only within United States and that the device should be windows device. When constraints are applied to the first activity it is then called restricted activity (ra1) .In ODRL condition is that the user can listen to the music file within United States and the constraint is that the device should be a windows device.
+
+The second activity is payment which is bounded by a constraint (c2) that the user needs to pay an amount of \$15 in USD to get access to the music file. We then call this activity as restricted activity (ra2) after the constraint (c2) is applied. 
+
+Then we define a policy which allows permission to first restricted activity (ra1) when second restricted activity (ra2) is true. So this ra2 is an obligation that needs to be fulfilled in order to get permission for ra1. This obligation is represented as a requirement in ODRL.

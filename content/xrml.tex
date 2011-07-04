@@ -1,2 +1,13 @@
 \subsection{XRML}\label{sec:model-xrml}
-XRML applied
+
+Extensible Rights Markup Language (XRML) is a language used to basically define rights. It helps the owner of digital resources to identify the users allowed to access these resources, what rights are available to the users, and the conditions under which those rights may be applied. The XRML language has different concepts .We are interested in mapping the concepts namely grant, principal, right, resource and condition into our framework.
+
+In our framework the principal is a subject, grant is permission and right is an activity. Resource in XRML is the same as resource in our framework. The concept of condition in XRML means restriction, obligation and constraints in our framework.
+
+
+The XRML license is given below.
+
+\lstinputlisting[]{content/code/xrml/xrml.xml}
+%%==> The XRML License (place the XML file for XRML)
+
+We are using the same scenario about listening to music from an online music library as listed in the previous ODRL section. In the XRML license, principal is the user who wants access to the music library. Right is granted to listen from a resource given the condition that the country should be US and the device should be windows based are true, and that we have already made a payment of the amount USD \$15. In the DSL, payment and listen are defined as activities. Whereas listening to music only on windows based device and within US is a constraint. When the above constraints are satisfied the user gets permission to access the resource. 
