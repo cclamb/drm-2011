@@ -1,0 +1,5 @@
+
+authorization = activity :project_authorization do
+  is_authorized? :yuma
+end
+

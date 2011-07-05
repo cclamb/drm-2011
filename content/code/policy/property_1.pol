@@ -1,0 +1,21 @@
+
+property :OperatingSystem do
+  values :windows, :osx, :selinux
+  functions :set, :get, :equatable
+end
+
+property :device do
+  values :workstation, :handheld, :blackberry, :terminal
+  functions :set, :get, :equatable
+end
+
+property :project do
+  values :zebra, :yuma, :lion
+  functions :set, :get, :equatable
+end
+
+property :role do
+  values :alpha, :beta, :delta
+  functions :set, :get, :equatable
+end
+

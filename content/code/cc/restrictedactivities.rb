@@ -1,3 +1,4 @@
+
 # 1) Public Domain
 share_pd_work = restrict share do
   # No constaints
@@ -34,3 +35,4 @@ share_by_nc_nd_work = restrict share do
   with attribution, non_commercial_use,
        non_derivative_work
 end
+

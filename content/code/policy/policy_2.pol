@@ -1,0 +1,10 @@
+
+pol = policy do
+  policy_evaluators :propositional
+  constraint_evauators :propositional
+  permit restricted_view do
+    when authorization
+    count_limit restricted_view, 5
+  end
+end
+

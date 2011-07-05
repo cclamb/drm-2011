@@ -1,0 +1,13 @@
+
+entity :subject do
+  contains :project, :role, :securityclearance
+end
+
+entity :environment do
+  contains :device, :operatingsystem, :securitydomain
+end
+
+entity :resource do
+  contains :securityclassification
+end
+

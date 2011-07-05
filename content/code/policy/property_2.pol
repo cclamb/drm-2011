@@ -1,0 +1,21 @@
+
+property :securitydomain do
+  values :abnet, :secnet, :telnet, :omninet
+  functions :set, :get, :comparable
+  order :abnet, :secnet, :telnet, :omninet
+end
+
+property :securityclearance do
+  values :topsecret, :secret, :confidential
+  functions :set, :get, :comparable
+  order :topsecret, :secret, :confidential
+end
+
+property :securityclassification do
+  values :topsecret, :secret, :confidential, 
+    :unclassified
+  functions :set, :get, :comparable
+  order :topsecret, :secret, :confidential, 
+    :unclassified
+end
+

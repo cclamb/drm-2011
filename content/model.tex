@@ -3,7 +3,7 @@ In developing this DSL, we needed to have a clear understanding of the specific 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=2.5in]{blank}
+\includegraphics[width=3.4in]{players}
 \caption{Conceptual Model}
 \label{fig:model:conceptual-model}
 \end{figure}
@@ -15,7 +15,7 @@ We developed this model to help us understand how policy-centric DSLs would be u
 \subsection{Expected Use}
 In order to develop the appropriate DSL giving users the power and expressivity they need to easily express usage management concepts, we begin by developing a model describing how we expect it to be used, and by whom, identifying key functional and non-functional characteristics.  We use roles codified as actors to identify the primary user base, and link those roles to specific use cases we expect to be common in day to day DSL use.  We also identify common inputs and outputs from expected activities, and show how those input and output elements are related.  We finally specify the essential core structure of the DSL, as well as extension points and default implementations of those points.
 
-In general day to day use, we expect that certain activities will be much more common that others.  For example, each \textit{policy} requires a \textit{context} in order to both be developed and to run.  That \textit{context} describes the actors using an artifact protected by a policy, the artifact itself, and the environment in which the artifact is both expected to be used (during policy design) and is being used (at evaluation).  That said, the expectation is that the number of policies is much greater than the number of contexts associated with those policies.
+In general day to day use, we expect that certain activities will be much more common that others.  For example, each \textbf{policy} requires a \textbf{context} in order to both be developed and to run.  That \textbf{context} describes the actors using an artifact protected by a policy, the artifact itself, and the environment in which the artifact is both expected to be used (during policy design) and is being used (at evaluation).  That said, the expectation is that the number of policies is much greater than the number of contexts associated with those policies.
 
 Likewise, we expect that the number of times a policy is evaluated is much greater than the number of times that policy is designed and created.  Policies should be read, evaluated, or combined with other policies frequently.  This gives us a magnitude ordering for these activities, where the number of supported contexts is much less than the number of created policies, which is in turn much less than the number of times that policy is evaluated or otherwise used.
 
@@ -30,15 +30,15 @@ This has specific implications on both the DSL syntax and performance profile.  
 
 Figure \ref{fig:model:use-cases} shows the primary system actors we have identified as well as the use cases with which they will be involved.  Actors include:
 \begin{itemize}
-\item \textit{Context Author}.  The context author is responsible for defining the context in which a policy will be applied to a given resource.  The context itself defines the environment in which the policy executes, the resource to which the policy is applied, and the subject that attempts to use the resource.
-\item \textit{Policy Designer}.  The policy designer is responsible for putting together a specification for a given policy that a policy author can use to build an instance of a policy.  The person in this role is also responsible for building various policy evaluation components for the DSL if needed.  
-\item \textit{Policy Author}.  The policy author creates a policy to control the use of a subject defined in the policy context.
-\item \textit{Evaluator}. Another system element, an evaluator evaluates a given policy with a specific context.
+\item \textbf{Context Author}.  The context author is responsible for defining the context in which a policy will be applied to a given resource.  The context itself defines the environment in which the policy executes, the resource to which the policy is applied, and the subject that attempts to use the resource.
+\item \textbf{Policy Designer}.  The policy designer is responsible for putting together a specification for a given policy that a policy author can use to build an instance of a policy.  The person in this role is also responsible for building various policy evaluation components for the DSL if needed.  
+\item \textbf{Policy Author}.  The policy author creates a policy to control the use of a subject defined in the policy context.
+\item \textbf{Evaluator}. Another system element, an evaluator evaluates a given policy with a specific context.
 \end{itemize}
 
 When a context author creates a context, that author compiles the elements of that context for use both at policy creation and policy execution.  When the policy is initially created, the resource is the only defined element.  Generally both the subject, representing the eventual user, and the environment, containing information describing the evaluation environment, are only defined at the classifier level.  That is to say, they both are defined, but individual properties have yet to be assigned.
 
-Creating a policy is an activity undertaken by a policy author.  This step requires a \textit{declared} (but not \textit{defined}) context.  This is also undertaken in tandem with some kind of policy specification that describes roughly what the policy should manage and how it should be managed.  In the ontology we have defined, this is the step at which the policy designer defines the various constraints, activities, restricted activities, and obligations and develops the appropriate DSL components required to evaluate that policy.  Creating a new policy is precisely what it describes - creating a brand new policy applied to a context.
+Creating a policy is an activity undertaken by a policy author.  This step requires a \textbf{declared} (but not \textbf{defined}) context.  This is also undertaken in tandem with some kind of policy specification that describes roughly what the policy should manage and how it should be managed.  In the ontology we have defined, this is the step at which the policy designer defines the various constraints, activities, restricted activities, and obligations and develops the appropriate DSL components required to evaluate that policy.  Creating a new policy is precisely what it describes - creating a brand new policy applied to a context.
 
 The included cases define policy, assemble policy, and verify policy are common development steps through which the policy is essentially designed, developed, and then tested against a context.
 
@@ -49,43 +49,43 @@ Now we have a general understanding of the expected use of a given policy, and h
 \subsection{Domain Model}
 Our domain model will be the foundation of our DSL.  It will allow us to begin to understand the various language elements and how they are related, leading us to an eventual syntax to represent these classifiers and relationships.  Not understanding this structure well, or developing a structure that does not support our defined use cases will lead us to develop a DSL that inadequately supports our expected use.
 
-Based on our use cases, we know the model contains a \textit{context}, some kind of policy-specific sub-ontology, and a logic engine that can act over that sub-ontology.  Based on our current understanding of our needs, the sub-ontology contains \textit{obligations} and \textit{constraints} applied to \textit{activities}.  We use simple first-order logic to reason over the policy elements.
+Based on our use cases, we know the model contains a \textbf{context}, some kind of policy-specific sub-ontology, and a logic engine that can act over that sub-ontology.  Based on our current understanding of our needs, the sub-ontology contains \textbf{obligations} and \textbf{constraints} applied to \textbf{activities}.  We use simple first-order logic to reason over the policy elements.
 
 This understanding leads us to the model view in Figure \ref{fig:model:ontology}.  Of special note, the specific policy sub-ontology is contained in the usage semantics package, as is all policy evaluators.  Both of these can change within this model to allow for inclusion of more complex policy systems and powerful reasoning capabilities.
 
 Primary elements within this ontology are:
 \begin{itemize}
-\item \textit{Runtime}.  This is the system that manages use of a given \textit{resource} by a \textit{subject} in accordance with a \textit{policy}.  It is responsible for providing and managing context elements, controlling policies and licenses, and handling requests from subjects.  Realizations of this system must be cross platform to support distributed use as well.
-\item \textit{Context}.  The context describes the operating environment of the policy.  This information must be available at runtime, and parts of it must be understood when the policy is initially designed.  In order to effectively control use of a given artifact, the parameters that artifact can be used under must be understood when the policy is created and must be read when that policy is evaluated.
+\item \textbf{Runtime}.  This is the system that manages use of a given \textbf{resource} by a \textbf{subject} in accordance with a \textbf{policy}.  It is responsible for providing and managing context elements, controlling policies and licenses, and handling requests from subjects.  Realizations of this system must be cross platform to support distributed use as well.
+\item \textbf{Context}.  The context describes the operating environment of the policy.  This information must be available at runtime, and parts of it must be understood when the policy is initially designed.  In order to effectively control use of a given artifact, the parameters that artifact can be used under must be understood when the policy is created and must be read when that policy is evaluated.
 \begin{itemize}
-\item \textit{Environment}.  The environment in which a given policy is evaluated.  This must be understood in order to constrain the conditions where a policy will allow or disallow artifact access.  This is essentially an associative array, where the keys are specific expected properties of a given environment.
-\item \textit{Resource}.  A resource is the artifact over which the policy controls use.  This can be any type of artifact whatsoever, ranging from documents to media files to streaming data.  A resource may also have arbitrary properties like an associated URI, a canonical name, a MIME type, or creation metadata.
-\item \textit{Subject}.  Subjects use a given resource.  Acceptable use is described by the policy.
+\item \textbf{Environment}.  The environment in which a given policy is evaluated.  This must be understood in order to constrain the conditions where a policy will allow or disallow artifact access.  This is essentially an associative array, where the keys are specific expected properties of a given environment.
+\item \textbf{Resource}.  A resource is the artifact over which the policy controls use.  This can be any type of artifact whatsoever, ranging from documents to media files to streaming data.  A resource may also have arbitrary properties like an associated URI, a canonical name, a MIME type, or creation metadata.
+\item \textbf{Subject}.  Subjects use a given resource.  Acceptable use is described by the policy.
 \end{itemize}
-\item \textit{Policy}.  A policy describes the conditions of use for a given resource.  In our example, this includes information on acceptable contexts and subjects, as well as obligations and constraints.  Policies can be configured in this DSL to use arbitrary evaluators.  This allows users to implement specific policy semantics tailored to their domain if needed, though they are free to use packaged syntax evaluators if those evaluators fit their needs. 
-\item \textit{Usage Semantics}.  As policies can implement arbitrary semantics, they can be based on an specific models tailored to the needs for the particular policy system.  For example, this DSL currently implements obligations and constraints restricting defined activities.  Other domains may need to use more descriptive semantics, perhaps addressing causality or ordering.
+\item \textbf{Policy}.  A policy describes the conditions of use for a given resource.  In our example, this includes information on acceptable contexts and subjects, as well as obligations and constraints.  Policies can be configured in this DSL to use arbitrary evaluators.  This allows users to implement specific policy semantics tailored to their domain if needed, though they are free to use packaged syntax evaluators if those evaluators fit their needs. 
+\item \textbf{Usage Semantics}.  As policies can implement arbitrary semantics, they can be based on an specific models tailored to the needs for the particular policy system.  For example, this DSL currently implements obligations and constraints restricting defined activities.  Other domains may need to use more descriptive semantics, perhaps addressing causality or ordering.
 \end{itemize}
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=2.5in]{ontology}
+\includegraphics[width=2in]{ontology}
 \caption{Basic Language Model}
 \label{fig:model:ontology}
 \end{figure}
 
-Current usage semantics package various evaluators (specifically constraint and policy evaluators) and related entities as shown in Figure \ref{fig:model:usage-semantics}. Flexibility in policy evaluation is provided by pluggable \textit{evaluators}.  These evaluators essentially execute a given policy in tandem with a supplied context.
+Current usage semantics package various evaluators (specifically constraint and policy evaluators) and related entities as shown in Figure \ref{fig:model:usage-semantics}. Flexibility in policy evaluation is provided by pluggable \textbf{evaluators}.  These evaluators essentially execute a given policy in tandem with a supplied context.
 
 \begin{itemize}
-\item \textit{Evaluators}.  Evaluators are pluggable components that provide flexibility in policy capability.  We currently use two --- one for evaluating policies, and one for evaluating constraints.  Policy designers can also specify multiple evaluators to enable combinations of semantics, as long as those semantics are not in conflict.  Evaluators can use any kind of computational model or logic as well.  For example, one evaluator may use a simple state machine model to evaluate a policy, while another may use a more complex turing-complete model.
+\item \textbf{Evaluators}.  Evaluators are pluggable components that provide flexibility in policy capability.  We currently use two --- one for evaluating policies, and one for evaluating constraints.  Policy designers can also specify multiple evaluators to enable combinations of semantics, as long as those semantics are not in conflict.  Evaluators can use any kind of computational model or logic as well.  For example, one evaluator may use a simple state machine model to evaluate a policy, while another may use a more complex turing-complete model.
 \begin{itemize}
-\item \textit{Policy Evaluator}.  This evaluator is responsible for evaluating the policy as a whole.  To do so, it evaluates the relationships between permissions and obligations, and uses the constraint evaluator to examine restricted activities.
-\item \textit{Constraint Evaluator}.  Constraint evalutators specifically examine constraints defined within restricted activities.  They can do so using arbitrary evaluation rules ranging from simple conjunctive evaluation (where all constraints must be true) to more complex schemes where, for example, a certain number of constraints must be true while one of a set of other constraints must be false.
+\item \textbf{Policy Evaluator}.  This evaluator is responsible for evaluating the policy as a whole.  To do so, it evaluates the relationships between permissions and obligations, and uses the constraint evaluator to examine restricted activities.
+\item \textbf{Constraint Evaluator}.  Constraint evalutators specifically examine constraints defined within restricted activities.  They can do so using arbitrary evaluation rules ranging from simple conjunctive evaluation (where all constraints must be true) to more complex schemes where, for example, a certain number of constraints must be true while one of a set of other constraints must be false.
 \end{itemize}
-\item \textit{Obligation}.  An obligation describes a restricted activity that must have occurred or must occur in the future for a restricted activity to be performed.  For example, a media stream may wish to obligate users to purchase access to that stream on the third access.
-\item \textit{Permission}.  In this context, a permission is a restricted activity that a subject can perform under the condition that certain specified obligations are met.
-\item \textit{Constraint}.  A constraint generally constrains a restricted activity.  This could be as simple as limiting use to a single identifiable subject or as complex as limiting use based on time and date, user identity, and geographic location.
-\item \textit{Activity}.  A general activity is something a subject would wish to do in association with an artifact.  It describes how a \textit{subject} would use a \textit{resource} in an unrestricted way, or some action that \textit{subject} performs.
-\item \textit{Restricted Activity}.  When an activity is embellished with constraints or obligation, it becomes restricted.
+\item \textbf{Obligation}.  An obligation describes a restricted activity that must have occurred or must occur in the future for a restricted activity to be performed.  For example, a media stream may wish to obligate users to purchase access to that stream on the third access.
+\item \textbf{Permission}.  In this context, a permission is a restricted activity that a subject can perform under the condition that certain specified obligations are met.
+\item \textbf{Constraint}.  A constraint generally constrains a restricted activity.  This could be as simple as limiting use to a single identifiable subject or as complex as limiting use based on time and date, user identity, and geographic location.
+\item \textbf{Activity}.  A general activity is something a subject would wish to do in association with an artifact.  It describes how a \textbf{subject} would use a \textbf{resource} in an unrestricted way, or some action that \textbf{subject} performs.
+\item \textbf{Restricted Activity}.  When an activity is embellished with constraints or obligation, it becomes restricted.
 \end{itemize}
 
 \begin{figure}[!t]
@@ -95,14 +95,14 @@ Current usage semantics package various evaluators (specifically constraint and 
 \label{fig:model:usage-semantics}
 \end{figure}
 
-Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textit{policy ontology} and \textit{policy logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
+Now we have rigorously defined the domain elements our DSL will address.  Keep in mind, this domain model allows us to dynamically replace ontology elements in that all \textbf{policy ontology} and \textbf{policy logic} elements can be replaced on per-policy basis.  This would allow us to create multiple policies described using disparate ontologies and related evaluation logics if needed to more fully describe restrictions in a specific evaluation domain.
 
-We have also separated the definition of \textit{activities} from \textit{restricted activities}.  This separation of concerns allows policy developers to define a single activity which can then be reused across a large number of restricted activities based on specific varying constraints.  For example, if I have a write activity, I can constrain that activity in slightly different ways to create a relatively large number of related restricted activities.  I could restrict write by geographic area, by subject identification, by date and time, or by having contributed to some political cause, creating four restricted activities from the same base activity.
+We have also separated the definition of \textbf{activities} from \textbf{restricted activities}.  This separation of concerns allows policy developers to define a single activity which can then be reused across a large number of restricted activities based on specific varying constraints.  For example, if I have a write activity, I can constrain that activity in slightly different ways to create a relatively large number of related restricted activities.  I could restrict write by geographic area, by subject identification, by date and time, or by having contributed to some political cause, creating four restricted activities from the same base activity.
 
 The base domain model however, based on contextual elements, policies, and licenses does not change.  This stability allows for ease of runtime integration as it hides any policy evaluation-specific changes.  As long as a given logic and policy ontology is delivered with a given policy, the policy evaluation runtime will be able to evaluate that policy against resources and subjects in a given environment.  In essense, this is a layered model where the context and policy elements compose the user interoperability layer while policies and policy logics form a more dynamic policy expression layer.  This way, resource users have a stable runtime view of policies and policy managed resources, while policy and context developers have the flexibility to implement policies at arbitrary levels of expressibility.
 
 \subsection{Envisioned Lifecycle}
-Also important to note, the primary artifacts generated within a typical lifecycle include a \textit{context specification} (which eventually becomes a \textit{context}) and a policy specification (eventually becoming a policy).  Two of the three actors work on specification development.  The context specification must be developed prior to a policy specification or policy as it contains not only the ontology describing the environment, resources, and subjects (and thier relationships), it also describes the availability of these elements.  The policy designer cannot develop a policy specification without a detailed understanding of the ontological elements in the domain of the policies he intends to support.  Likewise, the policy author cannot create a policy until the policy specification is in place.
+Also important to note, the primary artifacts generated within a typical lifecycle include a \textbf{context specification} (which eventually becomes a \textbf{context}) and a policy specification (eventually becoming a policy).  Two of the three actors work on specification development.  The context specification must be developed prior to a policy specification or policy as it contains not only the ontology describing the environment, resources, and subjects (and thier relationships), it also describes the availability of these elements.  The policy designer cannot develop a policy specification without a detailed understanding of the ontological elements in the domain of the policies he intends to support.  Likewise, the policy author cannot create a policy until the policy specification is in place.
 
 \begin{figure}[!t]
 \centering
@@ -112,5 +112,8 @@ Also important to note, the primary artifacts generated within a typical lifecyc
 \end{figure}
 
 Policies and contexts have slightly different lifecycles however.  A policy, on one hand, is created by a policy author and associated with a resource according to some kind of policy specification.  A context, on the other, while specified first, is instantiated last.  The context is partially instantiated when the policy author originally associated a resource with a given policy.  Likewise, the eventual user becomes the subject in the context.  Finally, the usage management runtime eventually creates the rest of the context, filling the environment with values as needed for evaluation in tandem with the policy.  We illustrate this expected lifecycle in Figure \ref{fig:model:lifecycle}.
+
+\subsection{Final Language Model}
+
 
 At this point, we have defined the primary elements in a policy lifecycle according to the usage management model we have established.  Furthermore, we have established the primary domain elements associated with our identified usage semantics, as well as key use cases for the system.  We have also located areas of heavy use as well as areas of low use within the domain model, so we have clear targets for our optimization efforts.  With this detailed understanding of this system, and an understanding of clear extension points, we could begin to implement the DSL and the system required to evaluate it.

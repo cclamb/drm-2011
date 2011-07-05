@@ -1,0 +1,17 @@
+
+view = activity :view do
+  # Some activity to enable viewing
+end
+
+c1 = constraint do
+  securityclassification >= :secret
+    && project == :yuma
+    && securityclearance >= :secret
+    && device == :blackberry
+    && securitydomain >= :secnet  
+end
+
+restricted_view = restrict view do
+  with c1
+end
+
