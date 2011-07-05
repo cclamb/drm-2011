@@ -1,5 +1,7 @@
 \section{Language}\label{sec:language}
-This section describes the domain specific language built upon the language model described in Section~\ref{sec:model}. First the deployment of the language is provided that explains how the DSL is operates and is used in usage management systems. This is followed by a detailed example of the syntax and semantics, and major components of the language. Finally, we demonstrate how the language can be extended to include different types of evaluators deploying different types of logics. 
+This section describes the domain specific language built upon the language model described in Section~\ref{sec:model}. First the deployment of the language is provided that explains how the DSL is operates and is used in usage management systems. This is followed by a detailed example of the syntax and semantics, and major components of the language. Finally, we demonstrate how the language can be extended to include different types of evaluators deploying different types of logics.
+
+This DSL is an {\em internal DSL} as opposed to an {\em external dsl}.  Internal DSLs are implemented within the syntactic constraints of a given parent language; in this case, Ruby.  We chose Ruby for our DSL implementation because of its perhaps excessively permissive and expressive syntax.  Certainly, this kind of language flexibility can cause problems in some environments, but when assembling a DSL, it is a requirement.  External DSLs on the other hand are implemented outside a specific execution environment and are implemented more like a traditional computing language like C or, in fact, Ruby. This kind of DSL requires some kind of compiler or interpreter, as well as lexers and parsers to process the language syntax appropriately.  External DSLs are almost always more expressive, but are more difficult and time consuming to develop when compared to their internal brethren.  As the DSL we describe here is an ongoing research project and constantly subject to change, we opted to develop it as an internal DSL rather than external, though this may change in the future.
 
 \begin{figure}[!t]
 \centering
@@ -76,15 +78,15 @@ The above policy is expressed in terms of the DSL in the following steps.
 
 \lstinputlisting[]{content/code/policy/activity_1.pol}
 
-First an activity {\em view} is defined and associated with the constraints defined in terms of context properties described earlier. Such activities with restrictions are called {\em restricted activities} as described in the language model. It must be noted that the activities defined in the DSL are agreed upon {\em a priori} with the client system. Now we define another activity, {\em project-authorization} along with its restrictions (or constraints)
+First an activity {\em view} is defined and associated with the constraints defined in terms of context properties described earlier.  This then becomes a {\em restricted activity}, as we have imposed contextual constraints on the activity.  It must be noted that the activities defined in the DSL are agreed upon {\em a priori} with the client system. Now we define another activity, {\em project-authorization} along with its restrictions (or constraints):
 
 \lstinputlisting[]{content/code/policy/activity_2.pol}
 
-Once activities activities $a1$ and $a2$ are defined, relationship between the two activities is defined. Such relationships are called usage policies, and are defined the policy definition of the DSL. Usage semantics establish relationships among different activities along with behavioral or or history-based characteristics such as count limits on a given activity. In the present form, the DSL allows permissions, obligations and count limits. However, the DSL can be extended, and usage semantics can be added or changed by using different types of evaluators. In this example, activity {\em view} is a permission, and activity {\em project-authorization} is an obligation for exercising this permission. These semantics are expressed in the DSL as follows. 
+Once activities activities $restricted_view$ and $authorization$ are defined, we can establish relationships between the two activities. Such relationships are called usage policies, and are defined the policy definition of the DSL. Usage semantics establish relationships among different activities along with behavioral or or history-based characteristics such as count limits on a given activity. In the present form, the DSL allows permissions, obligations and count limits. However, the DSL can be extended, and usage semantics can be added or changed by using different types of evaluators. In this example, restricted activity {\em view} is a permission, and activity {\em project-authorization} is an obligation for exercising this permission. These semantics are expressed in the DSL as follows. 
 
 \lstinputlisting[]{content/code/policy/policy_1.pol}
 
-The above policy specification says that the policy {\em pol} is defined using activities {\em a1} and {\em a2}, and activity {\em a1} is a permission that is obligated by activity {\em a2}.  Additional usage semantics could be added to this activity, for instance count-based limits as follows. 
+The above policy specification says that the policy {\em pol} is defined using activities {\em restricted\_view} and {\em authorized}.  Activity {\em restricted\_view} is a permission that is obligated by activity {\em authorization}.  Additional usage semantics could be added to this activity, for instance count-based limits as in the following policy:
 
 \lstinputlisting[]{content/code/policy/policy_2.pol}
 
@@ -105,12 +107,8 @@ The policy DSL proposed here is simply a skeleton which can extended by incorpor
 
 \subsection{Langauge Extensions}
 
-The DSL allows inclusion of different types of evaluators that provide users with different sets of usage semantics. The evaluators provide a design space for innovation and extensibility. In the examples provided here, the evaluators used for evaluating constraint (or restriction) semantics is a {\em propositional} evaluator. This evaluator allows constraints to be expressed as boolean formulas constructed from property functions. This evaluator provides a design space for expressing restrictions in terms of context properties. This evaluator is merely a pulugin that can be replaced by a different constraint evaluator that allows constraints to be expressed in a different manner. 
+The DSL allows inclusion of different types of evaluators that provide users with different sets of usage semantics. The evaluators provide a design space for innovation and extensibility. In the examples provided here, the evaluators used for evaluating constraint (or restriction) semantics are {\em propositional} evaluators, our current default type. This type of evaluator allows constraints to be expressed as boolean formulas constructed from property functions. This evaluator provides a design space for expressing restrictions in terms of context properties. This evaluator is merely a plugin that can be replaced by a different constraint evaluator that allows constraints to be expressed in a different manner. 
 
-Similarly, the policy construct uses a policy evaluator for expressing and reasoning about usage semantics. The {\em standard} evaluator used here allows expression of permissions, obligations and count-based limits. The usage semantics is similarly a design space where different types of evaluators can be used to express various types of usage semantics such as parallel actions, partial ordering, and interleaving semantics among others. 
+Similarly, the policy construct uses a policy evaluator for expressing and reasoning about usage semantics. The {\em standard} evaluator used here allows expression of permissions, obligations and count-based limits. The usage semantics is similarly a design space where different types of evaluators can be used to express various types of usage semantics such as parallel actions, partial ordering, and interleaving semantics among others.
 
 In the next section we show how different rights expression languages such as ODRL, XrML and creative commons can be mapped on to this DSL. 
-
-
-
-

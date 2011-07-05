@@ -1,6 +1,6 @@
 
 pol = policy do
-  policy_evaluators :propositional
+  policy_evaluators :standard
   constraint_evauators :propositional
   permit restricted_view do
     when authorization
