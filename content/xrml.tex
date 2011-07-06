@@ -1,13 +1,13 @@
 \subsection{XRML}\label{sec:model-xrml}
 
-Extensible Rights Markup Language (XRML) is a language used to basically define rights. It helps the owner of digital resources to identify the users allowed to access these resources, what rights are available to the users, and the conditions under which those rights may be applied. The XRML language has different concepts .We are interested in mapping the concepts namely grant, principal, right, resource and condition into our framework.
+Extensible Rights Markup Language (XrML) is a language used to define user's rights over a resource of some kind. It helps the owner of digital resources to identify the users allowed to access these resources, what rights are available to those users, and the conditions under which those rights may be applied. The XrML language has different concepts .We are interested in mapping the concepts namely grant, principal, right, resource and condition into our framework \cite{XrML-spec}.
 
-In our framework the principal is a subject, grant is permission and right is an activity. Resource in XRML is the same as resource in our framework. The concept of condition in XRML means restriction, obligation and constraints in our framework.
+A principal, in XrML, is someone who has been granted rights to a specific resource.  In this context, grant refers to the act of giving or temporarily providing those resource rights.  A right, associated with a grant, is some kind of action the principal can perform on a given resource, like listening to a song or editing a video stream.  Conditions specify specific terms under which a principal can wield rights over a resource.
 
+In this DSL, the principal is a subject, grant is permission and right is an activity. A resource in XRML is the same as resource in our DSL's implementation. The concept of condition in XRML maps to our obligation and constraints.
 
-The XRML license is given below.
+Using the same scenario we used in the ODRL example, we have build a representative XrML file describing user rights in this particular context:
 
 \lstinputlisting[]{content/code/xrml/xrml.xml}
-%%==> The XRML License (place the XML file for XRML)
 
-We are using the same scenario about listening to music from an online music library as listed in the previous ODRL section. In the XRML license, principal is the user who wants access to the music library. Right is granted to listen from a resource given the condition that the country should be US and the device should be windows based are true, and that we have already made a payment of the amount USD \$15. In the DSL, payment and listen are defined as activities. Whereas listening to music only on windows based device and within US is a constraint. When the above constraints are satisfied the user gets permission to access the resource. 
+In this XrML license, the principal is the user who wants access to the music library. The rights holder gives the right to listen to a resource given the condition that the country in which the the listening occurs is the United States and the device is windows based. Furthermore, the principal must also have already made a payment of the amount USD \$15.  In the DSL fragment from the previous section, payment and listen are defined as activities, whereas listening to music only on windows based device and within United States is a constraint. When the above constraints are satisfied the user gets permission to access the resource.
