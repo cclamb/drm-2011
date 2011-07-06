@@ -1,7 +1,7 @@
 \section{Language}\label{sec:language}
 This section describes the domain specific language built upon the language model described in Section~\ref{sec:model}. First the deployment of the language is provided that explains how the DSL is operates and is used in usage management systems. This is followed by a detailed example of the syntax and semantics, and major components of the language. Finally, we demonstrate how the language can be extended to include different types of evaluators deploying different types of logics.
 
-This DSL is an {\em internal DSL} as opposed to an {\em external dsl}.  Internal DSLs are implemented within the syntactic constraints of a given parent language; in this case, Ruby.  We chose Ruby for our DSL implementation because of its perhaps excessively permissive and expressive syntax.  Certainly, this kind of language flexibility can cause problems in some environments, but when assembling a DSL, it is a requirement.  External DSLs on the other hand are implemented outside a specific execution environment and are implemented more like a traditional computing language like C or, in fact, Ruby. This kind of DSL requires some kind of compiler or interpreter, as well as lexers and parsers to process the language syntax appropriately.  External DSLs are almost always more expressive, but are more difficult and time consuming to develop when compared to their internal brethren.  As the DSL we describe here is an ongoing research project and constantly subject to change, we opted to develop it as an internal DSL rather than external, though this may change in the future.
+This DSL is an {\em internal DSL} as opposed to an {\em external dsl}.  Internal DSLs are implemented within the syntactic constraints of a given parent language; in this case, Ruby.  We chose Ruby for our DSL implementation because of its perhaps excessively permissive and expressive syntax.  Certainly, this kind of language flexibility can cause problems in some environments, but when assembling a DSL, it is a requirement.  External DSLs on the other hand are implemented outside a specific execution environment and are developed more like a traditional computing language like C or, in fact, Ruby. This kind of DSL requires some kind of compiler or interpreter, as well as lexers and parsers to process the language syntax appropriately.  External DSLs are almost always more expressive, and much more secure, but are more difficult and time consuming to develop when compared to their internal brethren.  As the DSL we describe here is an ongoing research project and constantly subject to change, we opted to develop it as an internal DSL rather than external, though this may change in the future.
 
 \begin{figure}[!t]
 \centering
@@ -11,7 +11,7 @@ This DSL is an {\em internal DSL} as opposed to an {\em external dsl}.  Internal
 \end{figure}
 
 \subsection{Language Operation}
-The use and operation of the DSL for usage management is shown in Figure~\ref{fig:DSL-usage}. The DSL provides a language for specification of contexts and policies as described in the previous section. As shown in the figure, the DSL can incorporate different types of evaluators for expression of different types of usage semantics. A DSL, along with an appropriate evaluator is then used to specify contexts and policies. Users are allowed to choose from different types of evaluators that provide the right type of semantics needed by the users. The policy specification and context specification, described using the DSL is then taken by a Ruby compiler to generate a corresponding context and policy object. In usage management systems, context objects are generated on the client side and maintained within the computing platform. The policy specification is provided by the resource owners, is converted into a policy object. Following this, the policy and context objects interact with each other and operate within a usage management system.  
+The use and operation of the DSL for usage management is shown in Figure~\ref{fig:DSL-usage}. The DSL provides a language for specification of contexts and policies as described in the previous section. As shown in the figure, the DSL can incorporate different types of evaluators for expression of different types of usage semantics. A DSL, along with an appropriate evaluator is then used to specify contexts and policies. Users are allowed to choose from different types of evaluators that provide the right type of semantics needed by the users. The policy specification and context specification, described using the DSL is then taken by a Ruby compiler to generate a corresponding context and policy object. In usage management systems, context objects are generated on the client side and maintained within the computing platform. The policy specification is provided by the resource owners and is converted into a policy object. Following this, the policy and context objects interact with each other and operate within a usage management system.  
 
 \subsection{Language Description}
 The language is based on the model description provided in the previous section, and enables specification of the various policy semantics and context descriptions. 
@@ -48,17 +48,17 @@ The DSL provides a mechanism for specification of different types of contexts ba
 \label{default}
 \end{table*} 
 
-Consider a multi-level security context as shown in Table~\ref{table:context}. The context consists of two entities, namely, {\em Subject} and {\em Environment} and {\em Resource}. {\em Subject} entity has three properties, namely, {\em Security Clearance}, {\em Role} and {\em Project}. {\em Environment} entity has three properties, namely, {\em OperatingSystem}, {\em Device} and {\em SecurityDomain}. {\em Resource} entity has one property, {\em SecurityClassification}. Every property supports a set of functions depending on the type of that property. For the purpose of this discussion, we explain two types of properties, namely, equatable and comparable. Equatable properties primarily support equality functions  ``$=$" and ``$!=$". Comparable properties support functions that allow relative comparison of two values, namely, ``$=$" , ``$\ne$", ``$<$", ``$>$",  ``$\leq$", ``$\geq$" and ``$between()$". Both, equatable and comparable property types support ``$get()$" and ``$set()$" functions to retrieve and set property values. The properties {\em OperatingSystem}, {\em Device}, {\em Project} and {\em Role} are equatable properties, and {\em SecurityDomain}, {\em SecurityClearance} and {\em SecurityClassfication} are comparable properties. {\em SecurityDomain} property values have the ordering $ABNet > SECNet > TELNet > OMNINet$,  {\em SecurityClearance} property values have the ordering $Top\;Secret > Secret > Confidential$, and {\em SecurityClassification} property values have the ordering $Top\;Secret > Secret > Confidential > Unclassified$. 
+Consider a multi-level security context as shown in Table~\ref{table:context}. The context consists of three entities, namely, {\em Subject}, {\em Environment} and {\em Resource}. The {\em Subject} entity has three properties, namely, {\em Security Clearance}, {\em Role} and {\em Project}.  The {\em Environment} entity has three properties, namely, {\em OperatingSystem}, {\em Device} and {\em SecurityDomain}.  The {\em Resource} entity has one property, {\em SecurityClassification}. Every property supports a set of functions depending on the type of that property.  For the purpose of this discussion, we explain two types of properties, namely, equatable and comparable.  Equatable properties primarily support equality functions  ``$=$" and ``$\ne$". Comparable properties support functions that allow relative comparison of two values, namely, ``$=$" , ``$\ne$", ``$<$", ``$>$",  ``$\leq$", ``$\geq$" and ``$between()$". Both equatable and comparable property types support ``$get()$" and ``$set()$" functions to retrieve and set property values. The properties {\em OperatingSystem}, {\em Device}, {\em Project} and {\em Role} are equatable properties, and {\em SecurityDomain}, {\em SecurityClearance} and {\em SecurityClassfication} are comparable properties. {\em SecurityDomain} property values have the ordering $ABNet > SECNet > TELNet > OMNINet$,  {\em SecurityClearance} property values have the ordering $Top\;Secret > Secret > Confidential$, and {\em SecurityClassification} property values have the ordering $Top\;Secret > Secret > Confidential > Unclassified$. 
 
 In order to specify this context, individual properties are defined first as follows. 
 
 \lstinputlisting[]{content/code/policy/property_1.pol}
 	
-In this example, classes  {\em OperatingSystem, Device, Project} and {\em Role} that inherit the type {\em Property} are specified. The term {\em values} specify the set of valid values and {\em functions} define the set of functions supported by the class as described earlier. Similarly, classes for comparable properties are defined, with the addition that the ordering of the valid values is specified by the user as shown below. 
+In this example, classes  {\em OperatingSystem, Device, Project} and {\em Role} that implement the type {\em Property} are specified. The term {\em values} specify the set of valid values and {\em functions} define the set of functions supported by the class as described earlier. Similarly, classes for comparable properties are defined, with the addition that the ordering of the valid values is specified by the user as shown below: 
 
 \lstinputlisting[]{content/code/policy/property_2.pol}
 
-In this example, classes {\em SecurityDomain}, {\em SecurityClearance} and {\em SecurityClassification} that inherit the type {\em Property} are generated. Each of these classes are comparable and provide a set of comparison functions. The {\em order} keyword allows context designers to specify the value ordering in an easy manner. The property classes defined here are now assigned to the entities {\em Subject}, {\em Resource} and {\em Environment}. These assignments are described in the DSL as follows. 
+In this example, classes {\em SecurityDomain}, {\em SecurityClearance} and {\em SecurityClassification} that implement the type {\em Property} are generated. Each of these classes are comparable and provide a set of comparison functions. The {\em order} keyword allows context designers to specify the value ordering in an easy manner. The property classes defined here are now assigned to the entities {\em Subject}, {\em Resource} and {\em Environment}. These assignments are described in the DSL as follows: 
 
 \lstinputlisting[]{content/code/policy/entity.pol}
 
@@ -66,15 +66,15 @@ The above specification generates the {\em Subject}, {\em Resource} and {\em Env
 
 \lstinputlisting[]{content/code/policy/context.pol}
 
-This specification generates the {\em MultilevelSecurity} class that contains entities {\em Subject}, {\em Resource} and {\em Environment}. The process of context specification is carried out by context designers. This a less frequently carried out process, and the DSL provides an easier way to provide this specification. The {\em MultilevelSecurity} class is instantiated, and the corresponding object of this class is maintained on the client system. The property values maintained by this object defines the circumstances under which activities are carried out in the client system. 
+This specification generates the {\em MultilevelSecurity} class that contains entities {\em Subject}, {\em Resource} and {\em Environment}. The process of context specification is carried out by context designers. This is a less frequently carried out process, but the DSL still provides a relatively easy way to provide this specification. The {\em MultilevelSecurity} class is instantiated, and the corresponding object of this class is maintained on the client system. The property values maintained by this object define the circumstances under which activities are carried out in the client system. 
 
 It must be noted that various kinds of properties can be described using this method. For example, properties having set-based characteristics can be defined that support set functions such as ``$in()$" to determine if a given element is a part of the set. 
 
 The context generated in this manner is then used to define policies. The DSL provides a policy specification component that provides an easy way to specify policies. Policy specification are read by the Ruby interpreter and converted into policy objects. For example, consider the following policy. 
 
-{\em ``A document with a security classification greater than or equal to Secret can only be viewed by subjects working on project Yuma having security clearance greater than or equal to Secret on only Blackberry devices operating in security domain greater than SECNet . Also, viewing can be done only after project Yuma has been project-authorized. "}
+{\em ``A document with a security classification greater than or equal to Secret can only be viewed by subjects working on project Yuma having security clearance greater than or equal to Secret on only Blackberry devices operating in a security domain greater than SECNet . Also, viewing can be done only after project Yuma has been project-authorized. "}
 
-The above policy is expressed in terms of the DSL in the following steps. 
+This policy is expressed in terms of the DSL in the following steps: 
 
 \lstinputlisting[]{content/code/policy/activity_1.pol}
 
@@ -82,7 +82,7 @@ First an activity {\em view} is defined and associated with the constraints defi
 
 \lstinputlisting[]{content/code/policy/activity_2.pol}
 
-Once activities activities $restricted_view$ and $authorization$ are defined, we can establish relationships between the two activities. Such relationships are called usage policies, and are defined the policy definition of the DSL. Usage semantics establish relationships among different activities along with behavioral or or history-based characteristics such as count limits on a given activity. In the present form, the DSL allows permissions, obligations and count limits. However, the DSL can be extended, and usage semantics can be added or changed by using different types of evaluators. In this example, restricted activity {\em view} is a permission, and activity {\em project-authorization} is an obligation for exercising this permission. These semantics are expressed in the DSL as follows. 
+Once activities {\em restricted\_view} and {\em authorization} are defined, we can establish relationships between the them. Such relationships are called usage policies, and are defined the policy definition of the DSL. Usage semantics establish relationships among different activities along with behavioral or or history-based characteristics such as count limits on a given activity. In the present form, the DSL allows permissions, obligations and count limits. However, the DSL can be extended, and usage semantics can be added or changed by using different types of evaluators. In this example, restricted activity {\em view} is a permission, and activity {\em project-authorization} is an obligation for exercising this permission. These semantics are expressed in the DSL as follows. 
 
 \lstinputlisting[]{content/code/policy/policy_1.pol}
 
@@ -90,17 +90,17 @@ The above policy specification says that the policy {\em pol} is defined using a
 
 \lstinputlisting[]{content/code/policy/policy_2.pol}
 
-Once the policy specification is provided to the Ruby interpreter, it converts it into a policy object. A policy object is nothing by an executable ruby object with a well-defined policy interface. An example interface provided by the standard policy evaluator defined here contains the following set of functions.
+Once the policy specification is provided to the Ruby interpreter, it converts it into a policy object. A policy object is nothing but an executable ruby object with a well-defined policy interface. An example interface provided by the standard policy evaluator defined here contains the following set of functions.
 
 Note, in both policies we explicitly identify both the constraint and policy evaluators.  This is done for clarity in this case; these values are in fact the default interpretation values used so those statements could very well be omitted.
 
 \begin{itemize}
-\item {\bf permissions?()} Returns the set of permissions for a given policy.
-\item {\bf obligations?(a)} Returns the set of all obligations associated with a given permission. 
-\item {\bf remaining\_obligations(a)} Returns the set of remaining obligations for a given permission. 
-\item {\bf remaining\_count(a)} Returns the set of remaining count for a given permission. 
-\item {\bf allowed?(a, ctx)} A boolean function that returns {\em true/false} whether a given activity can be carried out under a given context. 
-\item {\bf reset()} Resets the policy by resetting its state. 
+\item {\bf permissions?()}. Returns the set of permissions for a given policy.
+\item {\bf obligations?(a)}. Returns the set of all obligations associated with a given permission. 
+\item {\bf remaining\_obligations(a)}. Returns the set of remaining obligations for a given permission. 
+\item {\bf remaining\_count(a)}. Returns the set of remaining count for a given permission. 
+\item {\bf allowed?(a, ctx)}. A boolean function that returns {\em true/false} whether a given activity can be carried out under a given context. 
+\item {\bf reset()}. Resets the policy by resetting its state. 
 \end{itemize}
 
 The policy DSL proposed here is simply a skeleton which can extended by incorporating different types of logics expressing various usage semantics. The manner in which these extensions may be carried out is described next. 
