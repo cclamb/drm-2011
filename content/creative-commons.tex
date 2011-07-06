@@ -1,14 +1,14 @@
 \subsection{Creative Commons}\label{sec:model-cc}
 In this section, we use our DSL to implement a policy that can be used with
-Creative Commons licensed content.  The Creative Commons is a nonprofit
+creative commons licensed content.  The creative commons is a nonprofit
 organization that provides free, easy-to-use legal tools that provide a simple,
 standardized way to pre-clear usage rights to creative works for copyright
 owners.  It gives copyright holders an easy way to license their works in a way
 that leaves ``some rights reserved'' as compared to the ``all rights reserved''
-default.  By providing these legal tools, the Creative Commons hopes to
+default.  By providing these legal tools, the creative commons hopes to
 increase the amount of creativity available ``in the commons'' \cite{creative-commons}.
 
-Seven main license types are defined by Creative Commons:
+Seven main license types are defined by creative commons:
 
 \begin{itemize}
 \item \textbf{Public Domain}. This license does not put any restrictions on how others may remix, tweak, or
@@ -36,18 +36,18 @@ download your works and share them with others as long as they credit you, but
 they cannot change them in any way or use them commercially.
 \end{itemize}
 
-Now that we have explained the different Creative Commons license types, what
+Now that we have explained the different creative commons license types, what
 they mean, and the restrictions they have, we will create a policy with our DSL
-that represents compliant usage of Creative Commons licensed works.
+that represents compliant usage of creative commons licensed works.
 
-First, we use our DSL to define an activity.  In Creative Commons there is
-really only one activity --  sharing a Creative Commons licensed work -- so
+First, we use our DSL to define an activity.  In creative commons there is
+really only one activity --  sharing a creative commons licensed work -- so
 this code is fairly simple, defining the \texttt{share} activity.
 
 \lstinputlisting[]{content/code/cc/activity.rb}
 
 Next, we define constraints on the \texttt{share} activity.  There are four
-such constraints in Creative Commons, as discussed above: attribution,
+such constraints in creative commons, as discussed above: attribution,
 commercial use, derivative work, and share-alike.  This results in four
 constraints defined in our DSL as follows:
 
