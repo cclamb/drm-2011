@@ -16,8 +16,8 @@
                 <payment> 
                   <condition>
                     <amount>15.00</amount>
-                 		<currency>USD</currency>
-               		</condition>
+                    <currency>USD</currency>
+                  </condition>
                 </payment>
               </rights>
             </grant>
