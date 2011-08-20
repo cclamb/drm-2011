@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 14:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:07
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -520,8 +520,8 @@ Overfull \hbox (2.84416pt too wide) in paragraph at lines 2--3
  []
 
 
-Overfull \hbox (4.78026pt too wide) in paragraph at lines 8--9
-\ninept work, we can ex-press this ei-ther with spe-cific con-straints
+Overfull \hbox (3.32932pt too wide) in paragraph at lines 8--9
+\ninept have been per-formed prior to use, and as such can model
  []
 
 
@@ -529,12 +529,8 @@ Overfull \hbox (10.21436pt too wide) in paragraph at lines 12--13
 []\ninept To demon-strate the map-ping be-tween the ODRL model
  []
 
-(./content/code/odrl/odrl.xml) (./content/code/policy/example.pol [12])
-Overfull \hbox (4.5935pt too wide) in paragraph at lines 21--22
-[]\ninept In the DSL, the first ac-tiv-ity is lis-ten which is bounded
- []
-
-) (./content/xrml.tex
+(./content/code/odrl/odrl.xml) (./content/code/policy/example.pol [12]))
+(./content/xrml.tex
 Overfull \hbox (8.86739pt too wide) in paragraph at lines 4--5
 []\ninept A \T1/aer/m/it/9 prin-ci-pal\ninept , in XrML, is some-one who has be
 en granted
@@ -553,21 +549,6 @@ Overfull \hbox (3.87885pt too wide) in paragraph at lines 2--3
 
 Overfull \hbox (12.53519pt too wide) in paragraph at lines 2--3
 \ninept ten-sive trans-la-tion be-tween all sup-ported rights lan-guages. 
- []
-
-
-Overfull \hbox (3.61476pt too wide) in paragraph at lines 4--5
-\ninept of the ini-tial model we used to de-fine our prob-lem space.
- []
-
-
-Overfull \hbox (1.30403pt too wide) in paragraph at lines 4--5
-\ninept as an in-ter-nal DSL with spe-cific ex-am-ples. We wrapped
- []
-
-
-Overfull \hbox (4.68172pt too wide) in paragraph at lines 4--5
-\ninept up the pa-per with demon-stra-tions of equiv-a-lence to com-
  []
 
 [13]) (./content/references.tex (./dsl.bbl
@@ -590,7 +571,7 @@ Overfull \hbox (30.37605pt too wide) in paragraph at lines 132--136
 Here is how much of TeX's memory you used:
  3590 strings out of 495061
  46057 string characters out of 1182622
- 129746 words of memory out of 3000000
+ 128746 words of memory out of 3000000
  6619 multiletter control sequences out of 15000+50000
  56310 words of font info for 75 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -606,7 +587,7 @@ ive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (15 pages, 495884 bytes).
+Output written on dsl.pdf (15 pages, 495939 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
