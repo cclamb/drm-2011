@@ -8,45 +8,45 @@ Warning--to sort, need author or key in creative-commons
 Warning--empty author in OMADRM
 Warning--can't use both author and editor fields in JaHe:08
 Warning--empty year in ctrl:lamb-MCCCS
-You've used 26 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            676 strings with 8308 characters,
-and the built_in function-call counts, 9116 in all, are:
-= -- 921
-> -- 352
-< -- 12
-+ -- 147
-- -- 114
-* -- 595
-:= -- 1391
-add.period$ -- 81
-call.type$ -- 26
-change.case$ -- 136
+            682 strings with 8464 characters,
+and the built_in function-call counts, 9650 in all, are:
+= -- 973
+> -- 375
+< -- 13
++ -- 156
+- -- 122
+* -- 630
+:= -- 1465
+add.period$ -- 84
+call.type$ -- 27
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 402
-empty$ -- 783
-format.name$ -- 114
-if$ -- 2037
+cite$ -- 33
+duplicate$ -- 427
+empty$ -- 826
+format.name$ -- 122
+if$ -- 2161
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 22
-newline$ -- 132
-num.names$ -- 44
-pop$ -- 192
+int.to.str$ -- 27
+missing$ -- 23
+newline$ -- 137
+num.names$ -- 46
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 110
+purify$ -- 116
 quote$ -- 0
-skip$ -- 283
+skip$ -- 306
 stack$ -- 0
-substring$ -- 525
-swap$ -- 115
-text.length$ -- 12
+substring$ -- 563
+swap$ -- 128
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 102
+type$ -- 106
 warning$ -- 6
-while$ -- 79
-width$ -- 28
-write$ -- 296
+while$ -- 83
+width$ -- 29
+write$ -- 307
 (There were 6 warnings)

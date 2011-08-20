@@ -110,6 +110,12 @@ C.~C. Lamb, P.~A. Jamkhedkar, G.~L. Heileman, and C.~T. Abdallah.
 \newblock In {\em 6th IEEE International Conference on System of Systems
   Engineering (SOSE)}. IEEE.
 
+\bibitem{ctrl:lamb-SOSE}
+C.~C. Lamb, P.~A. Jamkhedkar, G.~L. Heileman, and C.~T. Abdallah.
+\newblock Managed control of composite cloud systems.
+\newblock In {\em System of Systems Engineering (SoSE), 2011 6th International
+  Conference on}, pages 167 --172, june 2011.
+
 \bibitem{PoPrDe:04}
 J.~Polo, J.~Prados, and J.~Delgado.
 \newblock Interoperability between {ODRL} and {MPEG-21} {REL}.

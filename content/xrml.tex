@@ -1,9 +1,9 @@
 \subsection{XRML}\label{sec:model-xrml}
-Extensible Rights Markup Language (XrML) is a language used to define a user's rights over a resource of some kind. It helps the owner of a digital resource to identify the users allowed to access that resource, what rights are available to those users, and the conditions under which those rights may be applied. Here, we are interested in mapping the grant, principal, right, resource and condition concepts into our framework \cite{XrML-spec}.
+Extensible Rights Markup Language (XrML) is a language used to define a user's rights over a resource of some kind. It helps the owner of a digital resource to identify the users allowed to access that resource, what rights are available to those users, and the conditions under which those rights may be applied. Here, we are interested in mapping the grant, principal, right, resource and condition concepts into the framework \cite{XrML-spec}.
 
 A \emph{principal}, in XrML, is someone who has been granted \emph{rights} to a specific \emph{resource}.  In this context, \emph{grant} refers to the act of giving or temporarily providing those resource rights.  A \emph{right}, associated with a \emph{grant}, is some kind of action the principal can perform on a given resource, like listening to a song or editing a video stream.  \emph{Conditions} specify specific terms under which a principal can wield rights over a resource.
 
-In this DSL, the principal is a subject, grant is permission and right an activity. A resource in XrML is the same as resource in our DSL's implementation. The concept of condition in XRML maps to our obligations and constraints.
+In this DSL, the principal is a subject, grant is permission and right an activity. A resource in XrML is the same as resource in the DSL's implementation. The concept of condition in XRML maps to the DSL's obligations and constraints.
 
 Using the same scenario we used in the ODRL example, we have build a representative XrML file describing user rights in this particular context:
 

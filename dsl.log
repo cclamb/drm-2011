@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:44
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -258,13 +258,8 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 44.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./content/abstract.tex)
 (./content/metadata.tex
-Overfull \hbox (6.55124pt too wide) in paragraph at lines 2--1
-\ninept strat-ing key syn-tac-tic el-e-ments and high-light-ing the tech-
- []
-
-
-Overfull \hbox (6.33202pt too wide) in paragraph at lines 2--1
-\ninept ex-ten-si-ble rights markup lan-guage (XrML), and the open
+Overfull \hbox (2.11864pt too wide) in paragraph at lines 2--1
+\ninept clud-ing cre-ative com-mons, the ex-ten-si-ble rights markup
  []
 
 
@@ -299,13 +294,8 @@ Overfull \hbox (12.81046pt too wide) in paragraph at lines 10--11
  []
 
 
-Overfull \hbox (2.28354pt too wide) in paragraph at lines 15--16
-\ninept con-trol and dig-i-tal rights man-age-ment in-cor-po-rat-ing en-
- []
-
-
-Overfull \hbox (6.00208pt too wide) in paragraph at lines 15--16
-\ninept enough to pro-vide ser-vices across widely di-verg-ing com-
+Overfull \hbox (4.63673pt too wide) in paragraph at lines 15--16
+\ninept is-tics of tra-di-tional ac-cess con-trol and dig-i-tal rights man-
  []
 
 
@@ -331,6 +321,11 @@ Overfull \hbox (5.71754pt too wide) in paragraph at lines 6--7
  [][] 
  []
 
+
+Overfull \hbox (4.75859pt too wide) in paragraph at lines 11--12
+\ninept three pri-mary ac-tors work in tan-dem to cre-ate ex-e-cutable
+ []
+
 [2]
 Overfull \hbox (21.03928pt too wide) in paragraph at lines 16--17
 \ninept and by whom, iden-ti-fy-ing key func-tional and non-functional
@@ -344,7 +339,10 @@ Overfull \hbox (6.49617pt too wide) in paragraph at lines 20--21
 <./images/use-cases.jpg, id=16, 102.48322pt x 127.13719pt>
 File: ./images/use-cases.jpg Graphic file (type jpg)
 
-<use ./images/use-cases.jpg> [3 <./images/players.pdf>]
+<use ./images/use-cases.jpg>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./images/players.pdf> <./images/use-cases.jpg>]
 Overfull \hbox (1.21645pt too wide) in paragraph at lines 41--42
 \ninept and de-vel-ops the ap-pro-pri-ate DSL com-po-nents re-quired
  []
@@ -354,15 +352,7 @@ Overfull \hbox (8.48822pt too wide) in paragraph at lines 43--44
 \ninept and ver-ify pol-icy are com-mon de-vel-op-ment steps through
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (3.37335pt too wide) in paragraph at lines 50--51
-[]\ninept Our do-main model will be the foun-da-tion of our DSL.
- []
-
-[4 <./images/use-cases.jpg>]
+[4]
 Overfull \hbox (6.1715pt too wide) in paragraph at lines 62--63
 []\T1/aer/bx/n/9 Resource\ninept . A re-source is the ar-ti-fact over which
  []
@@ -561,7 +551,7 @@ Overfull \hbox (44.77606pt too wide) in paragraph at lines 4--8
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Overfull \hbox (30.37605pt too wide) in paragraph at lines 132--136
+Overfull \hbox (30.37605pt too wide) in paragraph at lines 138--142
 []\T1/pcr/m/n/8 http://virtualgoods.tu-ilmenau.de/2004/program.html\ninept .  
  []
 
@@ -569,10 +559,10 @@ Overfull \hbox (30.37605pt too wide) in paragraph at lines 132--136
 
 ] (./dsl.aux) ) 
 Here is how much of TeX's memory you used:
- 3590 strings out of 495061
- 46057 string characters out of 1182622
- 128746 words of memory out of 3000000
- 6619 multiletter control sequences out of 15000+50000
+ 3591 strings out of 495061
+ 46073 string characters out of 1182622
+ 128750 words of memory out of 3000000
+ 6620 multiletter control sequences out of 15000+50000
  56310 words of font info for 75 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  39i,10n,32p,1633b,1439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -587,7 +577,7 @@ ive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (15 pages, 495939 bytes).
+Output written on dsl.pdf (15 pages, 495957 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

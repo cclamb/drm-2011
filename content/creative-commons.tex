@@ -1,5 +1,5 @@
 \subsection{Creative Commons}\label{sec:model-cc}
-In this section, we use our DSL to implement a policy that can be used with creative commons licensed content.  The creative commons is a nonprofit organization that provides free, easy-to-use legal tools that provide a simple, standardized way to pre-clear usage rights to creative works for copyright owners.  It gives copyright holders an easy way to license their works in a way that leaves ``some rights reserved'' as compared to the ``all rights reserved'' default.  By providing these legal tools, the creative commons hopes to increase the amount of creativity available ``in the commons'' \cite{creative-commons}.
+In this section, we use the DSL to implement a policy that can be used with creative commons licensed content.  The creative commons is a nonprofit organization that provides free, easy-to-use legal tools that provide a simple, standardized way to pre-clear usage rights to creative works for copyright owners.  It gives copyright holders an easy way to license their works in a way that leaves ``some rights reserved'' as compared to the ``all rights reserved'' default.  By providing these legal tools, the creative commons hopes to increase the amount of creativity available ``in the commons'' \cite{creative-commons}.
 
 Seven main license types are defined by creative commons:
 
@@ -13,17 +13,17 @@ Seven main license types are defined by creative commons:
 \item \textbf{Attribution, Non-Commercial, No-Derivatives}.  This license is the most restrictive of the licenses, only allowing others to download your works and share them with others as long as they credit you, but they cannot change them in any way or use them commercially.
 \end{itemize}
 
-Now that we have explained the different creative commons license types, what they mean, and the restrictions they have, we will create a policy with our DSL that represents compliant usage of creative commons licensed works.
+Now that we have explained the different creative commons license types, what they mean, and the restrictions they have, we will create a policy with the DSL that represents compliant usage of creative commons licensed works.
 
-First, we use our DSL to define an activity.  In creative commons there is really only one activity ---  sharing a creative commons licensed work --- so this code is fairly simple, defining the \texttt{share} activity.
+First, we use the DSL to define an activity.  In creative commons there is really only one activity ---  sharing a creative commons licensed work --- so this code is fairly simple, defining the \texttt{share} activity.
 
 \lstinputlisting[]{content/code/cc/activity.rb}
 
-Next, we define constraints on the \texttt{share} activity.  There are four such constraints in creative commons, as discussed above: attribution, commercial use, derivative work, and share-alike.  This results in four constraints defined in our DSL:
+Next, we define constraints on the \texttt{share} activity.  There are four such constraints in creative commons, as discussed above: attribution, commercial use, derivative work, and share-alike.  This results in four constraints defined in the DSL:
 
 \lstinputlisting[]{content/code/cc/constraints.rb}
 
-Finally, we define the restricted activities, covering all seven basic license types.  For example, in the following code listing, the \texttt{share\_by\_work} restricted activity is defined by associating the \texttt{attribution} constraint with the \texttt{share} activity. Likewise, the \texttt{share\_by\_sa\_work} restricted activity associates the \texttt{attribution} and \texttt{share\_alike} constraints with the \texttt{share} activity.  Sharing activites for all seven license types are defined similarly, resulting in a policy that allows for sharing all types of Creative Commons licensed works, with proper constraints.
+Finally, we define the restricted activities, covering all seven basic license types.  For example, in the following code listing, the \texttt{share\_by\_work} restricted activity is defined by associating the \texttt{attribution} constraint with the \texttt{share} activity. Likewise, the \texttt{share\_by\_sa\_work} restricted activity associates the \texttt{attribution} and \texttt{share\_alike} constraints with the \texttt{share} activity.  Sharing activities for all seven license types are defined similarly, resulting in a policy that allows for sharing all types of Creative Commons licensed works, with proper constraints.
 
 \lstinputlisting[]{content/code/cc/restrictedactivities.rb}
 
