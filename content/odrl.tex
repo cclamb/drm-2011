@@ -3,24 +3,23 @@ ODRL provides the necessary semantics for Digital Rights Management expressions 
 
 In ODRL, \emph{permissions} are related to \emph{actions} that a \emph{subject} can execute on a \emph{resource} of some kind and generally encapsulate use, reuse, transfers, and general asset management.  The following analysis is modeled on ORDL v. 1.1 \cite{Ia:02}.
 
-In our DSL we limit \emph{activities} with \emph{constraints}. Limiting an activity with a constraint yields a \emph{restricted activity}. This restricted activity can be either an obligation or a permission. While evaluating these permissions, necessary steps must be taken to maintain the restrictions. On the other hand, in ODRL constraints are directly associated with the permissions rather than actions.  Furthermore, constraints in our DSL are more flexible than those in ODRL generally. While ODRL constraints have two operands and a single operator, and are conjunctively evaluated, constraints in our system can be any kind of predicate with an arbitrary argument list and extensible semantics.
+In our DSL we limit \emph{activities} with \emph{constraints}. Limiting an activity with a constraint yields a \emph{restricted activity}. This restricted activity can be either an obligation or a permission. While evaluating these permissions, necessary steps must be taken to maintain the restrictions. On the other hand, in ODRL constraints are directly associated with the permissions rather than actions.  Furthermore, constraints in this DSL are more flexible than those in ODRL generally. While ODRL constraints have two operands and a single operator, and are conjunctively evaluated, constraints in this DSL can be any kind of predicate with an arbitrary argument list and extensible semantics.
 
-In ODRL, the condition model holds that if any condition is satisfied, indicating that an event did occur, then related permission is not granted. In our framework, we can express this either with specific constraints or via obligations.  Constraints would generally involve the current execution context in which the policy is currently evaluated, and would render a usage decision based on that.  Obligations are essentially activities, and can be activities that should have been performed prior to use, and as such can model conditions as well.
+In ODRL, the condition model holds that if any condition is satisfied, indicating that an event did occur, then related permission is not granted. In the framework outlined in this paper, we can express this either with specific constraints or via obligations.  Constraints would generally involve the current execution context in which the policy is evaluated, and would render a usage decision based on that information.  Obligations are essentially activities, and can be activities that should have been performed prior to use, and as such can model conditions as well.
 
-Last part is the context model. If we take into account the context model in ODRL, each and every entity has its own independent context whereas in our DSL all the entities lie inside a common context.  This allows for ease of ontology sharing between the various components operating within a given context.
+The last part is the context model. If we take into account the context model in ODRL, each and every entity has its own independent context whereas in our DSL all the entities lie inside a common context.  This allows for ease of ontology sharing between the various components operating within a given context.
 
 To demonstrate the mapping between the ODRL model and our framework, we will examine a scenario and express it as an ODRL license and then create an equivalent DSL. Consider a scenario where a user wants to listen to music from an on-line music library. To get access to the library the user has to pay the amount of \$15 USD. The music file can only be played on a windows based device within United States.
 
-%==> The ODRL License (place the ODRL XML file here and this a heading)
 \lstinputlisting[]{content/code/odrl/odrl.xml}
 
-The equivalent DSL would look like the following:
+The equivalent DSL would be:
 
 \lstinputlisting[]{content/code/policy/example.pol}
 
-In the DSL, the first activity is listen which is bounded by the constraint {\em c1} that the user can listen to the music only within United States and that the device must be a windows device. When constraints are applied to the first activity it is then called restricted activity {\em ra1}. Similar constraints are reflected in the ODRL snippet.
+In the DSL, the first activity is \emph{listen}, bounded by the constraint {\em c1} that the user can listen to the music only within United States and that the device must be a windows device. When constraints are applied to the first activity it is then called restricted activity {\em ra1}. Similar constraints are reflected in the ODRL snippet.
 
-The second activity is payment which is bounded by a constraint {\em c2} that the user needs to pay an amount of \$15 USD to get access to the music file. We then call this activity as restricted activity {\em ra2} after the constraint {\em c2} is applied. 
+The second activity is \emph{payment}, bounded by a constraint {\em c2} that the user needs to pay an amount of \$15 USD to get access to the music file. We then call this activity as restricted activity {\em ra2} after the constraint {\em c2} is applied. 
 
 Then we define a policy which allows permission to the first restricted activity {\em ra1} when second restricted activity {\em ra2} is true. So, {\em ra2} is an obligation that needs to be fulfilled in order to get permission for {\em ra1}. This obligation is represented as a requirement in ODRL.
 
