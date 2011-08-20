@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 13:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 14:49
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -400,16 +400,6 @@ Overfull \hbox (5.2481pt too wide) in paragraph at lines 82--83
 File: ./images/usage-semantics.jpg Graphic file (type jpg)
 
 <use ./images/usage-semantics.jpg>
-Overfull \hbox (3.09818pt too wide) in paragraph at lines 98--99
-[]\ninept Now we have rig-or-ously de-fined the do-main el-e-ments
- []
-
-
-Overfull \hbox (1.59012pt too wide) in paragraph at lines 98--99
-\ninept our DSL will ad-dress. Keep in mind, this do-main model
- []
-
-
 Overfull \hbox (4.4846pt too wide) in paragraph at lines 100--101
 []\ninept We have also sep-a-rated the def-i-ni-tion of \T1/aer/m/it/9 ac-tiv-i
 -ties \ninept from
@@ -428,15 +418,6 @@ Underfull \vbox (badness 1824) has occurred while \output is active []
 
  [6 <./images/usage-semantics.jpg> <./images/lifecycle.jpg>]) (./content/langua
 ge.tex
-Overfull \hbox (1.15096pt too wide) in paragraph at lines 117--1
-\ninept ment model we have es-tab-lished. Fur-ther-more, we have
- []
-
-
-Overfull \hbox (6.56186pt too wide) in paragraph at lines 117--1
-\ninept es-tab-lished the pri-mary do-main el-e-ments as-so-ci-ated with
- []
-
 <./images/DSL-usage.pdf, id=130, 574.145pt x 277.035pt>
 File: ./images/DSL-usage.pdf Graphic file (type pdf)
 
@@ -445,7 +426,15 @@ Overfull \hbox (12.94499pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-[7 <./images/DSL-usage.pdf>]
+
+Overfull \hbox (1.87666pt too wide) in paragraph at lines 14--15
+\ninept along with an ap-pro-pri-ate eval-u-a-tor is then used to spec-
+ []
+
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [7 <./images/DSL-usage.pdf>]
 Overfull \hbox (9.77116pt too wide) in paragraph at lines 51--52
 \T1/aer/m/it/9 ty-Clear-ance \ninept prop-erty val-ues have the or-der-ing $\OM
 L/cmm/m/it/9 Top Secret >
@@ -455,18 +444,7 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 55.
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-(./content/code/policy/property_1.pol)
-Overfull \hbox (7.72066pt too wide) in paragraph at lines 57--58
-[]\ninept In this ex-am-ple, classes \T1/aer/m/it/9 Op-er-at-ingSys-tem, De-vic
-e, Project
- []
-
-(./content/code/policy/property_2.pol)
-Overfull \hbox (1.41928pt too wide) in paragraph at lines 61--62
-[]\ninept In this ex-am-ple, classes \T1/aer/m/it/9 Se-cu-ri-ty-Do-main\ninept 
-, \T1/aer/m/it/9 Se-cu-ri-ty-Clear-
- []
-
+(./content/code/policy/property_1.pol) (./content/code/policy/property_2.pol)
 [8] (./content/code/policy/entity.pol)
 Overfull \hbox (3.75691pt too wide) in paragraph at lines 65--66
 []\ninept The above spec-i-fi-ca-tion gen-er-ates the \T1/aer/m/it/9 Sub-ject\n
@@ -479,61 +457,59 @@ Overfull \hbox (4.35057pt too wide) in paragraph at lines 69--70
 cu-rity \ninept class
  []
 
-(./content/code/policy/activity_1.pol)
-Overfull \hbox (8.9297pt too wide) in paragraph at lines 81--82
-\ninept Now we de-fine an-other ac-tiv-ity, \T1/aer/m/it/9 project-authorizatio
-n \ninept along
+(./content/code/policy/activity_1.pol) (./content/code/policy/activity_2.pol)
+Overfull \hbox (6.82635pt too wide) in paragraph at lines 85--86
+\ninept fined, we can es-tab-lish re-la-tion-ships be-tween them. Such
  []
 
-(./content/code/policy/activity_2.pol) (./content/code/policy/policy_1.pol)
-[9] (./content/code/policy/policy_2.pol)
+(./content/code/policy/policy_1.pol) [9] (./content/code/policy/policy_2.pol)
 Overfull \hbox (2.36037pt too wide) in paragraph at lines 110--111
 \ninept straints to be ex-pressed as boolean for-mu-las con-structed
  []
 
 ) (./content/applied.tex
+Overfull \hbox (13.43784pt too wide) in paragraph at lines 114--1
+\ninept pres-sion lan-guages and frame-works such as ODRL, XrML
+ []
+
+
 Overfull \hbox (8.93831pt too wide) in paragraph at lines 2--3
 []\ninept Now that the DSL has been mod-eled and im-ple-mented,
  []
 
 (./content/creative-commons.tex
-Overfull \hbox (3.72481pt too wide) in paragraph at lines 11--12
+Overfull \hbox (3.72481pt too wide) in paragraph at lines 4--5
 []\ninept Seven main li-cense types are de-fined by cre-ative com-
  []
 
 [10]
-Overfull \hbox (8.28354pt too wide) in paragraph at lines 25--27
+Overfull \hbox (8.28354pt too wide) in paragraph at lines 10--11
 \ninept for re-dis-tri-bu-tion, com-mer-cial and non-commercial,
  []
 
 
-Overfull \hbox (9.5271pt too wide) in paragraph at lines 27--31
+Overfull \hbox (9.5271pt too wide) in paragraph at lines 11--12
 \ninept must also ac-knowl-edge you and be non-commercial,
  []
 
 
-Overfull \hbox (5.49437pt too wide) in paragraph at lines 31--34
+Overfull \hbox (5.49437pt too wide) in paragraph at lines 12--13
 []\T1/aer/bx/n/9 Attribution, Non-Commercial, Share-Alike\ninept . This
  []
 
 
-Overfull \hbox (4.31323pt too wide) in paragraph at lines 31--34
+Overfull \hbox (4.31323pt too wide) in paragraph at lines 12--13
 \ninept your work non-commercially, as long as they credit
  []
 
-
-Overfull \hbox (1.16698pt too wide) in paragraph at lines 31--34
-\ninept you and li-cense their new cre-ations un-der the iden-
- []
-
 (./content/code/cc/activity.rb) (./content/code/cc/constraints.rb)
-Overfull \hbox (40.6528pt too wide) in paragraph at lines 56--65
+Overfull \hbox (40.6528pt too wide) in paragraph at lines 26--27
 \ninept straint with the \T1/pcr/m/n/9 share \ninept ac-tiv-ity. Like-wise, the
  \T1/pcr/m/n/9 share_by_sa_work
  []
 
 
-Overfull \hbox (38.30856pt too wide) in paragraph at lines 56--65
+Overfull \hbox (38.30856pt too wide) in paragraph at lines 26--27
 \ninept re-stricted ac-tiv-ity as-so-ciates the \T1/pcr/m/n/9 attribution \nine
 pt and \T1/pcr/m/n/9 share_alike
  []
@@ -630,7 +606,7 @@ ive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (15 pages, 495997 bytes).
+Output written on dsl.pdf (15 pages, 495884 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
