@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:56
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -422,20 +422,19 @@ Overfull \hbox (1.87666pt too wide) in paragraph at lines 14--15
  []
 
 
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [7 <./images/DSL-usage.pdf>]
 Overfull \hbox (9.77116pt too wide) in paragraph at lines 51--52
 \T1/aer/m/it/9 ty-Clear-ance \ninept prop-erty val-ues have the or-der-ing $\OM
 L/cmm/m/it/9 Top Secret >
  []
 
+[7 <./images/DSL-usage.pdf>]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 55.
+
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 (./content/code/policy/property_1.pol) (./content/code/policy/property_2.pol)
-[8] (./content/code/policy/entity.pol)
+(./content/code/policy/entity.pol [8])
 Overfull \hbox (3.75691pt too wide) in paragraph at lines 65--66
 []\ninept The above spec-i-fi-ca-tion gen-er-ates the \T1/aer/m/it/9 Sub-ject\n
 inept , \T1/aer/m/it/9 Re-source
@@ -504,7 +503,7 @@ Overfull \hbox (38.30856pt too wide) in paragraph at lines 26--27
 pt and \T1/pcr/m/n/9 share_alike
  []
 
-(./content/code/cc/restrictedactivities.rb [11])) (./content/odrl.tex
+(./content/code/cc/restrictedactivities.rb) [11]) (./content/odrl.tex
 Overfull \hbox (2.84416pt too wide) in paragraph at lines 2--3
 \ninept the ODRL Ex-pres-sion lan-guage there are dif-fer-ent mod-
  []
@@ -519,7 +518,7 @@ Overfull \hbox (10.21436pt too wide) in paragraph at lines 12--13
 []\ninept To demon-strate the map-ping be-tween the ODRL model
  []
 
-(./content/code/odrl/odrl.xml) (./content/code/policy/example.pol [12]))
+(./content/code/odrl/odrl.xml) (./content/code/policy/example.pol) [12])
 (./content/xrml.tex
 Overfull \hbox (8.86739pt too wide) in paragraph at lines 4--5
 []\ninept A \T1/aer/m/it/9 prin-ci-pal\ninept , in XrML, is some-one who has be
@@ -561,11 +560,11 @@ Overfull \hbox (30.37605pt too wide) in paragraph at lines 138--142
 Here is how much of TeX's memory you used:
  3591 strings out of 495061
  46073 string characters out of 1182622
- 128750 words of memory out of 3000000
+ 129750 words of memory out of 3000000
  6620 multiletter control sequences out of 15000+50000
  56310 words of font info for 75 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 39i,10n,32p,1633b,1439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,32p,1633b,1441s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/shar
 e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/ty
@@ -577,7 +576,7 @@ ive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (15 pages, 495954 bytes).
+Output written on dsl.pdf (15 pages, 495604 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
