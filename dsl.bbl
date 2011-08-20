@@ -1,0 +1,154 @@
+\begin{thebibliography}{10}
+
+\bibitem{OMADRM}
+Enabler release definition for {DRM} {V}2.0.
+\newblock Technical report, Open Mobile Alliance, 2003.
+\newblock {\small
+  \verb%xml.coverpages.org/OMA-ERELD_DRM-V2_0_0-20040401-D.pdf%}.
+
+\bibitem{ODRL-req}
+Open digital rights language {ODRL} version 2 requirements.
+\newblock ODRL, Feb. 2005.
+\newblock {\small \verb%odrl.net/2.0/v2req.html%}.
+
+\bibitem{creative-commons}
+{C}reative {C}ommons.
+\newblock {http://creativecommons.org/}, July 2011.
+
+\bibitem{Al:04}
+H.~Alverstrand.
+\newblock The role of the standards process in shaping the internet.
+\newblock {\em Proceeding of the IEEE}, 92(9):1371--1374, 2004.
+
+\bibitem{ArHu:07}
+A.~Arnab and A.~Hutchison.
+\newblock Persistent access control: A formal model for drm.
+\newblock In {\em DRM '07: Proceedings of the 2007 ACM workshop on Digital
+  Rights Management}, pages 41--53, New York, NY, USA, 2007. ACM.
+
+\bibitem{BaMi:06}
+A.~Barth and J.~C. Mitchell.
+\newblock Managing digital rights using linear logic.
+\newblock In {\em LICS '06: Proceedings of the 21st Annual IEEE Symposium on
+  Logic in Computer Science}, pages 127--136, Washington, DC, USA, 2006. IEEE
+  Computer Society.
+
+\bibitem{BlCl:01}
+M.~S. Blumenthal and D.~D. Clark.
+\newblock Rethinking the design of the {I}nternet: {T}he end-to-end arguments
+  vs. the brave new world.
+\newblock {\em ACM Transactions on Internet Technology}, 1(1):70--109, Aug.
+  2001.
+
+\bibitem{ChCoEtHaJoLa:03}
+C.~N. Chong, R.~Corin, S.~Etalle, P.~Hartel, W.~Jonker, and Y.~W. Law.
+\newblock License{S}cript: {A} novel digital rights language and its semantics.
+\newblock In {\em Third International Conference on the Web Delivery of Music},
+  pages 122--129, Los Alamitos, CA, Sept. 2003.
+
+\bibitem{ClWrSoBr:02}
+D.~D. Clark, J.~Wroclawski, K.~R. Sollins, and R.~Braden.
+\newblock Tussle in cyberspace: Defining tomorrow's internet.
+\newblock In {\em {SIGCOMM}}, pages 347--356, Pittsburg, Pennsylvania, USA,
+  Aug. 2002.
+
+\bibitem{HaWe:04}
+J.~Y. Halpern and V.~Weissman.
+\newblock A formal foundation for {XrML} licenses.
+\newblock In {\em Proceedings of the 17th IEEE Computer Security Foundations
+  Workshop}, pages 251--265, Asilomar, CA, June 2004.
+
+\bibitem{HaWe:08}
+J.~Y. Halpern and V.~Weissman.
+\newblock A formal foundation for {XrML}.
+\newblock {\em J. ACM}, 55(1):1--42, 2008.
+
+\bibitem{HeJa:05}
+G.~L. Heileman and P.~A. Jamkhedkar.
+\newblock {DRM} interoperability analysis from the perspective of a layered
+  framework.
+\newblock In {\em Proceedings of the Fifth ACM Workshop on Digital Rights
+  Management}, pages 17--26, Alexandria, VA, Nov. 2005.
+
+\bibitem{Ia:02}
+R.~Iannella.
+\newblock Open digital rights language~({ODRL}), {V}ersion 1.1, Aug. 2002.
+\newblock {\small \verb%odrl.net/1.1/ODRL-11.pdf%}.
+
+\bibitem{JaHe:04}
+P.~A. Jamkhedkar and G.~L. Heileman.
+\newblock {DRM} as a layered system.
+\newblock In {\em Proceedings of the Fourth ACM Workshop on Digital Rights
+  Management}, pages 11--21, Washington, DC, Oct. 2004.
+
+\bibitem{JaHe:08}
+P.~A. Jamkhedkar and G.~L. Heileman.
+\newblock {\em Handbook of Research on Secure Multimedia Distribution}, chapter
+  Rights Expression Languages.
+\newblock {IGI} Publishing, 2008.
+
+\bibitem{Jamkhedkar:2010:IUM:1866870.1866885}
+P.~A. Jamkhedkar, G.~L. Heileman, and C.~C. Lamb.
+\newblock An interoperable usage management framework.
+\newblock In {\em Proceedings of the tenth annual ACM workshop on Digital
+  rights management}, DRM '10, pages 73--88, New York, NY, USA, 2010. ACM.
+
+\bibitem{JaHeMa:06}
+P.~A. Jamkhedkar, G.~L. Heileman, and I.~Martinez-Ortiz.
+\newblock The problem with rights expression languages.
+\newblock In {\em Proceedings of the Sixth ACM Workshop on Digital Rights
+  Management}, pages 59--67, Alexandria, VA, Nov. 2006.
+
+\bibitem{KoLaMaMi:04}
+R.~H. Koenen, J.~Lacy, M.~MacKay, and S.~Mitchell.
+\newblock The long march to interoperable digital rights management.
+\newblock {\em Proceedings of the IEEE}, 92(6):883--897, 2004.
+
+\bibitem{ctrl:lamb-MCCCS}
+C.~C. Lamb, P.~A. Jamkhedkar, G.~L. Heileman, and C.~T. Abdallah.
+\newblock Managed control of composite cloud systems.
+\newblock In {\em 6th IEEE International Conference on System of Systems
+  Engineering (SOSE)}. IEEE.
+
+\bibitem{PoPrDe:04}
+J.~Polo, J.~Prados, and J.~Delgado.
+\newblock Interoperability between {ODRL} and {MPEG-21} {REL}.
+\newblock In {\em Proceedings of the first international ODRL workshop},
+  Vienna, Austria, Apr. 2004.
+
+\bibitem{PuWe:02}
+R.~Pucella and V.~Weissman.
+\newblock A logic for reasoning about digital rights.
+\newblock In {\em Proceedings of the 15th IEEE Computer Security Foundations
+  Workshop}, pages 282--294, Nova Scotia, Canada, June 2002.
+
+\bibitem{SaShUe:04}
+R.~Safavi-Naini, N.~P. Sheppard, and T.~Uehara.
+\newblock Import/export in digital rights management.
+\newblock In {\em Proceedings of the Fourth ACM Workshop on Digital Rights
+  Management}, pages 99--110, Washington, DC, Oct. 2004.
+
+\bibitem{ScTaWo:04}
+A.~U. Schmidt, O.~Tafreschi, and R.~Wolf.
+\newblock Interoperability challenges for {DRM} systems.
+\newblock In {\em IFIP/GI Workshop on Virtual Goods}, Ilmenau, Germany, 2004.
+\newblock {\small \verb%http://virtualgoods.tu-ilmenau.de/2004/program.html%}.
+
+\bibitem{Wa:04}
+X.~Wang.
+\newblock {MPEG-21} rights expression language: Enabling interoperable digital
+  rights management.
+\newblock {\em IEEE Multimedia}, 11(4):84--87, Oct.\slash Dec. 2004.
+
+\bibitem{XiBjFu:08}
+J.~Xiang, D.~Bjorner, and K.~Futatsugi.
+\newblock Formal digital license language with {OTS/CafeOBJ} method.
+\newblock In {\em Proceedings of the sixth ACS/IEEE International Conference on
+  Computer Systems and Applications}, Doha, Qatar, Apr. 2008.
+
+\bibitem{XrML-spec}
+e{X}tensible {R}ights {M}arkup {L}anguage ({XrML}) 2.0 {S}pecification,
+  November 2001.
+\newblock {\small \verb%www.xrml.org%}.
+
+\end{thebibliography}
