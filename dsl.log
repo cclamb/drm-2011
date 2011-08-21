@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 15:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  20 AUG 2011 22:25
 entering extended mode
  %&-line parsing enabled.
 **dsl.tex
@@ -216,18 +216,18 @@ Package: courier 2005/04/12 PSNFSS-v9.2a (WaS)
 ) (./dsl.aux)
 \openout1 = `dsl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -243,31 +243,25 @@ LaTeX Font Info:    ... okay on input line 23.
 \everyMPtoPDFconversion=\toks38
 )
 \c@lstlisting=\count122
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
  (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 44.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 45.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./content/abstract.tex)
-(./content/metadata.tex
-Overfull \hbox (2.11864pt too wide) in paragraph at lines 2--1
+)
+Overfull \hbox (2.11864pt too wide) in paragraph at lines 48--50
 \ninept clud-ing cre-ative com-mons, the ex-ten-si-ble rights markup
  []
 
-
-Overfull \hbox (3.39537pt too wide) in paragraph at lines 3--4
-\ninept Design, Lan-guages, The-ory, Se-cu-rity, Pol-icy Lan-guages 
- []
-
-) (./content/introduction.tex
+(./content/metadata.tex) (./content/introduction.tex
 Overfull \hbox (10.63249pt too wide) in paragraph at lines 4--5
 \ninept put-ing sys-tems, ex-cept at edge de-vices like mo-bile phones
  []
@@ -327,11 +321,6 @@ Overfull \hbox (4.75859pt too wide) in paragraph at lines 11--12
  []
 
 [2]
-Overfull \hbox (21.03928pt too wide) in paragraph at lines 16--17
-\ninept and by whom, iden-ti-fy-ing key func-tional and non-functional
- []
-
-
 Overfull \hbox (6.49617pt too wide) in paragraph at lines 20--21
 \ninept times that pol-icy is de-signed and cre-ated. Poli-cies should
  []
@@ -339,10 +328,8 @@ Overfull \hbox (6.49617pt too wide) in paragraph at lines 20--21
 <./images/use-cases.jpg, id=16, 102.48322pt x 127.13719pt>
 File: ./images/use-cases.jpg Graphic file (type jpg)
 
-<use ./images/use-cases.jpg>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./images/players.pdf> <./images/use-cases.jpg>]
+<use ./images/use-cases.jpg> [3 <./images/players.pdf> <./images/use-cases.jpg>
+]
 Overfull \hbox (1.21645pt too wide) in paragraph at lines 41--42
 \ninept and de-vel-ops the ap-pro-pri-ate DSL com-po-nents re-quired
  []
@@ -352,7 +339,7 @@ Overfull \hbox (8.48822pt too wide) in paragraph at lines 43--44
 \ninept and ver-ify pol-icy are com-mon de-vel-op-ment steps through
  []
 
-[4]
+
 Overfull \hbox (6.1715pt too wide) in paragraph at lines 62--63
 []\T1/aer/bx/n/9 Resource\ninept . A re-source is the ar-ti-fact over which
  []
@@ -367,7 +354,7 @@ Overfull \hbox (4.9284pt too wide) in paragraph at lines 62--63
 \ninept so-ci-ated URI, a canon-i-cal name, a MIME type,
  []
 
-<./images/ontology.jpg, id=121, 81.69652pt x 79.03777pt>
+[4] <./images/ontology.jpg, id=121, 81.69652pt x 79.03777pt>
 File: ./images/ontology.jpg Graphic file (type jpg)
 
 <use ./images/ontology.jpg>
@@ -385,15 +372,18 @@ Overfull \hbox (5.2481pt too wide) in paragraph at lines 82--83
 \ninept must be true) to more com-plex schemes where,
  []
 
-[5 <./images/ontology.jpg>]
-<./images/usage-semantics.jpg, id=125, 86.28893pt x 86.77234pt>
+<./images/usage-semantics.jpg, id=122, 86.28893pt x 86.77234pt>
 File: ./images/usage-semantics.jpg Graphic file (type jpg)
 
-<use ./images/usage-semantics.jpg>
+<use ./images/usage-semantics.jpg> [5 <./images/ontology.jpg>]
 Overfull \hbox (4.4846pt too wide) in paragraph at lines 100--101
 []\ninept We have also sep-a-rated the def-i-ni-tion of \T1/aer/m/it/9 ac-tiv-i
 -ties \ninept from
  []
+
+
+Underfull \vbox (badness 2626) has occurred while \output is active []
+
 
 <./images/lifecycle.jpg, id=126, 105.62538pt x 86.28893pt>
 File: ./images/lifecycle.jpg Graphic file (type jpg)
@@ -403,11 +393,8 @@ Overfull \hbox (7.39824pt too wide) in paragraph at lines 114--115
 []\ninept Policies and con-texts have slightly dif-fer-ent life-cycles
  []
 
-
-Underfull \vbox (badness 1824) has occurred while \output is active []
-
- [6 <./images/usage-semantics.jpg> <./images/lifecycle.jpg>]) (./content/langua
-ge.tex
+[6 <./images/usage-semantics.jpg> <./images/lifecycle.jpg>])
+(./content/language.tex
 <./images/DSL-usage.pdf, id=130, 574.145pt x 277.035pt>
 File: ./images/DSL-usage.pdf Graphic file (type pdf)
 
@@ -451,7 +438,8 @@ Overfull \hbox (6.82635pt too wide) in paragraph at lines 85--86
 \ninept fined, we can es-tab-lish re-la-tion-ships be-tween them. Such
  []
 
-(./content/code/policy/policy_1.pol) [9] (./content/code/policy/policy_2.pol)
+(./content/code/policy/policy_1.pol) (./content/code/policy/policy_2.pol
+[9])
 Overfull \hbox (2.36037pt too wide) in paragraph at lines 110--111
 \ninept straints to be ex-pressed as boolean for-mu-las con-structed
  []
@@ -558,13 +546,13 @@ Overfull \hbox (30.37605pt too wide) in paragraph at lines 138--142
 
 ] (./dsl.aux) ) 
 Here is how much of TeX's memory you used:
- 3591 strings out of 495061
- 46073 string characters out of 1182622
+ 3589 strings out of 495061
+ 46031 string characters out of 1182622
  129750 words of memory out of 3000000
  6620 multiletter control sequences out of 15000+50000
  56310 words of font info for 75 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 39i,10n,32p,1633b,1441s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,32p,1633b,1443s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/shar
 e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/ty
@@ -576,7 +564,7 @@ ive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 -texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dsl.pdf (15 pages, 495604 bytes).
+Output written on dsl.pdf (15 pages, 495406 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

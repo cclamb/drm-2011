@@ -9,6 +9,7 @@
 
 % Include PDF graphics, configure our images directory, and specify image types.
 \usepackage{graphicx}
+\usepackage{epsfig}
 \graphicspath{{./images/}}
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
 
@@ -36,14 +37,17 @@ Christopher C. Lamb, Pramod A. Jamkhedkar, Mathew P. Bohnsack, Viswanath Nandina
 }
 
 \conferenceinfo{DRM'11,} {October 21, 2011, Chicago, Illinois, USA.} 
-\CopyrightYear{2011}
-\crdata{978-1-4503-0091-9/10/10}
-\clubpenalty=10000
+\CopyrightYear{2011} 
+\crdata{978-1-4503-1005-5/11/10} 
+\clubpenalty=10000 
 \widowpenalty = 10000
 
 \maketitle
 
-\input{content/abstract}
+\begin{abstract}
+In this paper we describe the development of a domain specific language (DSL) for expressing usage management policies and associating those policies with managed artifacts.  We begin by framing a model for the language, including generalized use cases, a domain model, a general supported life-cycle, and specific extension requirements.  We then develop the language from that model, demonstrating key syntactic elements and highlighting the technology behind the language while tracing features back to the initial model.  We then demonstrate how the DSL supports common usage management and DRM-centric environments, including creative commons, the extensible rights markup language (XrML), and the open digital rights language (ODRL).
+\end{abstract}
+
 \input{content/metadata}
 \input{content/introduction}
 \input{content/model}
