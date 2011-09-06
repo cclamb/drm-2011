@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  1 SEP 2011 09:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  6 SEP 2011 05:52
 entering extended mode
  %&-line parsing enabled.
 **drm06s-lamb.tex
@@ -329,21 +329,22 @@ Overfull \hbox (12.94499pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 55.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 56.
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-(./content/code/policy/property_1.pol) (./content/code/policy/property_2.pol
-[6 <./images/DSL-usage.pdf>])
-Overfull \hbox (1.81758pt too wide) in paragraph at lines 61--62
+(./content/code/policy/property_1.pol) [6 <./images/DSL-usage.pdf>]
+(./content/code/policy/property_2.pol)
+Overfull \hbox (1.81758pt too wide) in paragraph at lines 63--64
 \T1/aer/m/it/9 Clear-ance \T1/aer/m/n/9 and \T1/aer/m/it/9 Se-cu-ri-ty-Clas-si-
 fi-ca-tion \T1/aer/m/n/9 that im-ple-ment the type
  []
 
 (./content/code/policy/entity.pol) (./content/code/policy/context.pol)
-(./content/code/policy/activity_1.pol) (./content/code/policy/activity_2.pol)
-[7] (./content/code/policy/policy_1.pol) (./content/code/policy/policy_2.pol))
-(./content/applied.tex (./content/creative-commons.tex
+(./content/code/policy/activity_1.pol) [7]
+(./content/code/policy/activity_2.pol) (./content/code/policy/policy_1.pol)
+(./content/code/policy/policy_2.pol)) (./content/applied.tex
+(./content/creative-commons.tex
 Overfull \hbox (2.76869pt too wide) in paragraph at lines 8--9
 []\T1/aer/bx/n/9 Attribution\T1/aer/m/n/9 . This li-cense lets oth-ers dis-trib
 ute, remix,
@@ -362,49 +363,40 @@ Overfull \hbox (4.34102pt too wide) in paragraph at lines 12--13
 (./content/code/cc/activity.rb) (./content/code/cc/constraints.rb)
 (./content/code/cc/restrictedactivities.rb)) (./content/odrl.tex [9]
 (./content/code/odrl/odrl.xml) (./content/code/policy/example.pol))
-(./content/xrml.tex (./content/code/xrml/xrml.xml
-Overfull \hbox (7.80252pt too wide) in paragraph at lines 9--10
-[][][][][][][][][][][][][][] 
- []
-
-[10]))) (./content/conclusion.tex)
+(./content/xrml.tex [10] (./content/code/xrml/xrml.xml)))
+(./content/conclusion.tex)
 Overfull \hbox (40.6288pt too wide) in paragraph at lines 63--67
 []\T1/pcr/m/n/8 xml.coverpages.org/OMA-ERELD_DRM-V2_0_0-20040401-D.pdf\T1/aer/m
 /n/9 .  
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Overfull \hbox (26.22879pt too wide) in paragraph at lines 197--201
+[11]
+Overfull \hbox (26.22879pt too wide) in paragraph at lines 198--202
 []\T1/pcr/m/n/8 http://virtualgoods.tu-ilmenau.de/2004/program.html\T1/aer/m/n/
 9 .  
  []
 
-[12
-
-] (./drm06s-lamb.aux) ) 
+[12] (./drm06s-lamb.aux) ) 
 Here is how much of TeX's memory you used:
  3582 strings out of 495061
  45967 string characters out of 1182622
- 136840 words of memory out of 3000000
+ 133840 words of memory out of 3000000
  6622 multiletter control sequences out of 15000+50000
  55527 words of font info for 75 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 39i,10n,32p,1641b,1443s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.
-pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
-xmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts
-/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/sha
-re/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on drm06s-lamb.pdf (12 pages, 514891 bytes).
+ 39i,10n,32p,1641b,874s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc
+}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmt
+i9.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
+/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/
+share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on drm06s-lamb.pdf (12 pages, 515024 bytes).
 PDF statistics:
  238 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

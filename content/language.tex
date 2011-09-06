@@ -16,6 +16,7 @@ Figure~\ref{fig:DSL-usage} outlines the use and operation of this DSL for usage 
 \subsection{Language Description}
 The language is based on the model description provided in the previous section, and enables specification of the various policy semantics and context descriptions. 
 
+\vfill\eject
 \subsubsection{Context Specification}
 The DSL provides a mechanism for specification of different types of contexts based on the context structure explained in the previous section. A context consists of a set of entities, such as Subject, Resource, and Environment, and each of these entities possess a set of properties. Every property supports a set of functions that operate over the property. The steps involved in defining a context first includes the description of different types of properties. The properties are then allocated to different entities, and then entities are assigned to a given context. 
 
@@ -56,6 +57,7 @@ In order to specify this context, individual properties are defined first:
 	
 This example specifies classes {\em OperatingSystem, Device, Project} and {\em Role} that implement the type {\em Property}. The term {\em values} specifies the set of valid values and {\em functions} define the set of functions supported by the class as described earlier. Similarly, the system defines classes for comparable properties, with the addition that the user specifies the ordering of the valid values: 
 
+\vfill\eject
 \lstinputlisting[]{content/code/policy/property_2.pol}
 
 Here we generate the classes {\em SecurityDomain}, {\em SecurityClearance} and {\em SecurityClassification} that implement the type {\em Property}. Each of these classes are comparable and provide a set of comparison functions. The {\em order} keyword allows context designers to specify the value ordering in an easy manner. The property classes defined here are now assigned to the entities {\em Subject}, {\em Resource} and {\em Environment}. These assignments are described in the DSL as follows: 
@@ -80,6 +82,7 @@ This policy is expressed in terms of the DSL in the following steps:
 
 First an activity {\em view} is declared and associated with the constraints defined in terms of context properties.  This then becomes a {\em restricted activity}, as we have imposed contextual constraints on the activity.  It must be noted that the activities defined in the DSL are agreed upon {\em a priori} with the client system.  Now we define another activity, {\em project-authorization} along with its restrictions (or constraints):
 
+\vfill\eject
 \lstinputlisting[]{content/code/policy/activity_2.pol}
 
 Once activities {\em restricted\_view} and {\em authorization} are defined, we can establish relationships between them. Such relationships are called usage policies, and are defined by the policy definition of the DSL. Usage semantics establish relationships among different activities along with behavioral or or history-based characteristics such as count limits on a given activity. In the present form, the DSL allows permissions, obligations and count limits. However, the DSL can be extended, and usage semantics can be added or changed by using different types of evaluators. In this example, restricted activity {\em view} is a permission, and activity {\em project-authorization} is an obligation for exercising this permission. These semantics are expressed in the DSL as follows: 
