@@ -78,8 +78,67 @@ Intro content
 
 \section{Design}
 \begin{frame}[t]
-\frametitle{Introduction}
-Intro content
+\frametitle{Design --- Notional Use}
+\begin{columns}[t]
+\column{.5\textwidth}
+Notional Use:
+\includegraphics[width=2.4in]{players}
+\begin{itemize}
+\item<2-> \textit{DSL} --- Domain specific language
+\item<3-> \textit{Policy Language} --- Language elements specific to \textit{policy}
+\end{itemize}
+\column{.5\textwidth}
+\begin{itemize}
+\item<4-> \textit{Context Language} --- Language elements specific to \textit{context}
+\item<5-> \textit{Policy Specification} --- Actual specification of policy
+\item<6-> \textit{Context Specification} --- Specification of context requirements
+\item<7-> \textit{Policy Object} --- An object embodying policy created from the DSL
+\item<8-> \textit{Context Object} --- An object containing context information used by the policy object
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Design --- Use Cases}
+\begin{columns}[t]
+\column{.5\textwidth}
+Use Cases:
+\includegraphics[width=2.3in]{use-cases}
+\column{.5\textwidth}
+\begin{itemize}
+\item<2-> \textit{Create Context} ---
+\item<3-> \textit{Create Policy} ---
+\item<4-> \textit{Evaluate Policy} ---
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Design --- Domain Model}
+\begin{columns}[t]
+\column{.5\textwidth}
+Domain Model:
+\includegraphics[width=2.3in]{ontology}
+\column{.5\textwidth}
+\pause
+The \textit{Runtime} accesses and activates a \textit{policy} and manages a \textit{context} to which the policy is given a reference.
+\newline
+\newline
+\pause
+The \textit{context} has access to information about the \textit{environment}, \textit{resource} managed, and the \textit{subject} using the \textit{resource}. 
+\newline
+\newline
+\pause
+Interactions are described by specific \textit{usage semantics} embodied in the \textit{policy}.
+\end{columns}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Design --- Usage Semantics}
+\begin{columns}[t]
+\column{.5\textwidth}
+\column{.5\textwidth}
+\end{columns}
 \end{frame}
 
 \section{Implementation}
@@ -92,6 +151,14 @@ Intro content
 \begin{frame}[t]
 \frametitle{Introduction}
 Intro content
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Sample --- Thing}
+\begin{columns}[t]
+\column{.5\textwidth}
+\column{.5\textwidth}
+\end{columns}
 \end{frame}
 
 \end{document}
