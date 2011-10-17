@@ -1,5 +1,5 @@
 \documentclass[t, 10pt]{beamer}
-%%\documentclass[t,handout]{beamer}
+%\documentclass[t,handout]{beamer}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -93,7 +93,7 @@ Notional Use:
 \item<5-> \textit{Policy Specification} --- Actual specification of policy
 \item<6-> \textit{Context Specification} --- Specification of context requirements
 \item<7-> \textit{Policy Object} --- An object embodying policy created from the DSL
-\item<8-> \textit{Context Object} --- An object containing context information used by the policy object
+\item<8-> \textit{Context Object} --- An object containing context
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -106,9 +106,9 @@ Use Cases:
 \includegraphics[width=2.3in]{use-cases}
 \column{.5\textwidth}
 \begin{itemize}
-\item<2-> \textit{Create Context} ---
-\item<3-> \textit{Create Policy} ---
-\item<4-> \textit{Evaluate Policy} ---
+\item<2-> \textit{Create Context} --- Prior to creating a policy, the context in which that policy will be evaluated must be defined.
+\item<3-> \textit{Create Policy} --- A designer creates a new type of policy, embodied by specific extension elements or semantic constraints over existing elements.  An author will use these to create an instance of a policy.
+\item<4-> \textit{Evaluate Policy} --- The policy is evaluated with a context.
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -137,19 +137,31 @@ Interactions are described by specific \textit{usage semantics} embodied in the 
 \frametitle{Design --- Usage Semantics}
 \begin{columns}[t]
 \column{.5\textwidth}
+Usage Semantics:
+\includegraphics[width=2.3in]{usage-semantics}
 \column{.5\textwidth}
+\pause
+A \textit{policy evaluator} examines and rectifies both \textit{permissions} and \textit{Obligations}.
+\newline
+\newline
+\pause
+A \textit{restricted activity} is a specialization of either a \textit{permission} or \textit{obligation}, and is associated with a specific \textit{activity}.
+\newline
+\newline
+\pause
+The association between an \textit{activity} and a \textit{restricted activity} is embodied by a \textit{constraint}, which is evaluated by a \textit{constraint evaluator}.
 \end{columns}
 \end{frame}
 
 \section{Implementation}
 \begin{frame}[t]
-\frametitle{Introduction}
+\frametitle{Implementation}
 Intro content
 \end{frame}
 
 \section{Application}
 \begin{frame}[t]
-\frametitle{Introduction}
+\frametitle{Application}
 Intro content
 \end{frame}
 
