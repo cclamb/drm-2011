@@ -1,5 +1,5 @@
 \documentclass[t, 10pt]{beamer}
-%\documentclass[t,handout]{beamer}
+%\documentclass[t, handout, 10pt]{beamer}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -13,6 +13,14 @@
 \usepackage{mathrsfs}
 \usepackage{amsfonts}
 \usepackage{enumerate}
+\usepackage{listings}
+
+\lstset{%rulesepcolor=\color{Gray},
+        frame=single,                        	% Shadow box frame around code
+        basicstyle=\scriptsize\ttfamily,        % Use small true type font
+        showstringspaces=false,                 % Don't put marks in string spaces
+        morecomment=[l][\color{Blue}]{...},     % Line continuation (...) like blue comment
+}
 
 \graphicspath{{./images/}} % Figures path - used in graphicx
 
@@ -154,17 +162,91 @@ The association between an \textit{activity} and a \textit{restricted activity} 
 \end{frame}
 
 \section{Implementation}
-\begin{frame}[t]
-\frametitle{Implementation}
-Intro content
+\begin{frame}{t}
+\frametitle{Implementation --- Lifecycle}
+Typical DSL Lifecycle: \\
+\begin{center}
+\includegraphics[width=4in]{DSL-usage}
+\end{center}
 \end{frame}
+
+\begin{frame}[t]
+\frametitle{Implementation --- Attributes}
+
+
+%\begin{table*}[t]
+%\caption{An example structure of context.}
+\label{table:context}
+\begin{center}
+{\tiny
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{ \bf Context}\\
+\hline
+{ \bf Entity} & {\bf Property ($p$)} & { \bf Domain ($D_p$)} & {\bf Functions ($F_p$)}\\
+\hline
+{Environment (E)} & OperatingSystem & \{Windows, OSX, SELinux\}&  equatable\\
+                                                    & Device & \{Workstation, Handheld, Blackberry, Terminal\} & equatable \\
+                                                    & SecurityDomain & \{ ABNet, SECNet, TELNet, OMNINet\} & comparable\\ 
+\hline
+{Subject (S)} & SecurityClearance & \{Top Secret, Secret, Confidential\} &  comparable\\
+				      &Project & \{Zebra, Yuma, Lion\} & equatable\\
+				       &Role & \{Alpha, Beta, Delta\} & equatable\\
+
+\hline
+ Resource(R) & SecurityClassification & \{ Top Secret, Secret, Confidential, Unclassified\} & comparable \\
+\hline
+\end{tabular}
+}
+\end{center}
+{\small
+{\bf Environment (E):} \\
+Operating System $\rightarrow$  \{Windows, OSX, SELinux\} $\rightarrow$  equatable\\
+Device $\rightarrow$  \{Workstation, Handheld, Blackberry, Terminal\} $\rightarrow$  equatable \\
+Security Domain $\rightarrow$ \{ABNet, SECNet, TELNet, OMNINet\} $\rightarrow$ comparable \\
+{\bf Subject(S):} \\
+SecurityClearance $\rightarrow$ \{Top Secret, Secret, Confidential\} $\rightarrow$ comparable\\
+Project $\rightarrow$ \{Zebra, Yuma, Lion\} $\rightarrow$ equatable\\
+Role $\rightarrow$ \{Alpha, Beta, Delta\} $\rightarrow$ equatable\\
+{\bf Resource(S):} \\
+Classification $\rightarrow$ \{TopSecret, Secret, Confidential, Unclassified\} $\rightarrow$ comparable\\
+}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Implementation --- Properties}
+\lstinputlisting[]{content/code/policy/property_1.pol}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Implementation --- Properties}
+\lstinputlisting[]{content/code/policy/property_2.pol}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Implementation --- Entity, Context}
+\lstinputlisting[]{content/code/policy/entity.pol}
+\pause
+\lstinputlisting[]{content/code/policy/context.pol}
+\end{frame}
+
+\begin{frame}{t}
+\frametitle{Implementation --- Activities, Constraints}
+\lstinputlisting[]{content/code/policy/activity_1.pol}
+\pause
+\lstinputlisting[]{content/code/policy/activity_2.pol}
+\end{frame}
+
+
+\begin{frame}{t}
+\frametitle{Implementation --- Policies}
+\lstinputlisting[]{content/code/policy/policy_1.pol}
+\pause
+\lstinputlisting[]{content/code/policy/policy_2.pol}
+\end{frame}
+
 
 \section{Application}
-\begin{frame}[t]
-\frametitle{Application}
-Intro content
-\end{frame}
-
 \begin{frame}{t}
 \frametitle{Sample --- Thing}
 \begin{columns}[t]
