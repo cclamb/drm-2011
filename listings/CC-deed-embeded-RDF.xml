@@ -1,0 +1,11 @@
+<!-- RDF code here for backwards compatibility.  Please use the
+     license's RDFa instead. -->
+<!-- <rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by/3.0/">
+    <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+</License>
+</rdf:RDF> -->

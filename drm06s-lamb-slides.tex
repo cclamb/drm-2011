@@ -1,5 +1,5 @@
-\documentclass[t, 10pt]{beamer}
-%\documentclass[t, handout, 10pt]{beamer}
+\documentclass[t, xcolor=dvipsnames, 10pt]{beamer}
+%\documentclass[t, xcolor=dvipsnames, handout, 10pt]{beamer}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -15,11 +15,23 @@
 \usepackage{enumerate}
 \usepackage{listings}
 
-\lstset{%rulesepcolor=\color{Gray},
-        frame=single,                        	% Shadow box frame around code
-        basicstyle=\scriptsize\ttfamily,        % Use small true type font
-        showstringspaces=false,                 % Don't put marks in string spaces
-        morecomment=[l][\color{Blue}]{...},     % Line continuation (...) like blue comment
+%\lstset{%rulesepcolor=\color{Gray},
+%        frame=single,                        	% Shadow box frame around code
+%        basicstyle=\scriptsize\ttfamily,        % Use small true type font
+%        showstringspaces=false,                 % Don't put marks in string spaces
+%       morecomment=[l][\color{Blue}]{...},     % Line continuation (...) like blue comment
+%}
+
+\lstset{ %
+basicstyle=\tiny\ttfamily,       % the size of the fonts that are used for the code and the font
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=shadowbox,                   % adds a frame around the code
+rulesepcolor=\color{Gray},
+tabsize=2,                      % sets default tabsize to 2 spaces
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
 }
 
 \graphicspath{{./images/}} % Figures path - used in graphicx
@@ -247,6 +259,125 @@ Classification $\rightarrow$ \{TopSecret, Secret, Confidential, Unclassified\} $
 
 
 \section{Application}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+    \frametitle{Application - CC REL}
+    \begin{itemize}
+        \item The Creative Commons Rights Expression Language
+        \item RDFa (Resource Description Framework in attributes) for HTML
+        Web pages and resources referenced therein
+        \item XMP (Extensible Metadata Platform) for stand-alone media
+        \item \texttt{http://wiki.creativecommons.org/CC\_REL}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Application - RDFa in HTML}
+        \begin{itemize}
+            \item Can simply associate web content with a CC license:
+        \end{itemize}
+\lstinputlisting[language=HTML]{listings/RDFaExample.html}
+        \begin{itemize}
+            \item But what are the semantics of \url{http://creativecommons.org/licenses/by/3.0/}?
+        \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+\frametitle{Application - License Deed Webpage}
+        \begin{itemize}
+            %\item Looking at license URL as rendered
+            %in browser, it's not obvious how a machine could
+            %derive semantics:
+            \item Can a machine derive this page's semantics?
+        \end{itemize}
+        \begin{center}
+            \includegraphics[height=0.8\textheight]{resources/cc/cc-deed-rendered-in-browser.png}
+        \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Application - RDF Embedded}
+        \begin{itemize}
+            \item The previous webpage contains the following embedded RDF:
+        \end{itemize}
+\lstinputlisting[language=HTML]{listings/CC-deed-embeded-RDF.xml}
+        \begin{itemize}
+            \item From this, a machine can determine that this license:
+            \begin{itemize}
+                \item Permits:
+                    \begin{itemize}
+                        \item \texttt{\#DerivativeWorks}, \texttt{\#Distribution}, \texttt{\#Reproduction}
+                    \end{itemize}
+                \item Requires:
+                    \begin{itemize}
+                        \item \texttt{\#Attribution}, \texttt{\#Notice}
+                    \end{itemize}
+            \end{itemize}
+            \item However, what do these things mean?  How are they implemented?
+        \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+\frametitle{Application - RDFa Embedded}
+        \begin{itemize}
+            \item In addition to the RDF shown on previous slide, CC License Deeds also have embedded RDFa
+            \item You can see that a machine can parse this data with something
+            like the RDFa Distiller and Parser Tool:
+        \end{itemize}
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{resources/RDF/RDFa-distiller.png}
+        \end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Application - RDFa Distiller}
+\lstinputlisting[language=HTML]{listings/RDF-from-RDFa-distiller.xml}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+\frametitle{Application - CC RDF Schema}
+        \begin{itemize}
+            \item License RDF(a) references \texttt{\#DerivativeWorks}, etc.,
+            in the CC namespace that's defined by a schema that's
+            human-readable and machine-readable RDF.
+            \item But... how immediately machine actionable is this schema?
+            \item Partial screenshot below:
+        \end{itemize}
+        \begin{center}
+            \includegraphics[width=0.4\textwidth]{resources/cc/schema-screenshot-partial.png}
+        \end{center}
+        \begin{itemize}
+            \item We would like to investigate replacing or augmenting RDF(a)
+            in the license deed with a license that's described with our DSL
+        \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+\frametitle{Application - DSL}
+    \begin{itemize}
+        \item By investigating replacing the contents of a license like
+        \url{http://creativecommons.org/licenses/by/3.0/} with something that
+        expresses the license in terms our DSL, we hope to:
+        \begin{itemize}
+            \item Maintain equivalent license semantics
+            \item Express the semantics in a form that is easier for humans to read and write
+            \item Enable a machine to more directly execute the license and reason over it
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+
+
 \begin{frame}{t}
 \frametitle{Sample --- Thing}
 \begin{columns}[t]
