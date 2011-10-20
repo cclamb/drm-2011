@@ -1,5 +1,5 @@
-\documentclass[t, xcolor=dvipsnames, 10pt]{beamer}
-%\documentclass[t, xcolor=dvipsnames, handout, 10pt]{beamer}
+%\documentclass[t, xcolor=dvipsnames, 10pt]{beamer}
+\documentclass[t, xcolor=dvipsnames, handout, 10pt]{beamer}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -93,7 +93,25 @@ University of New Mexico}
 \section{Introduction}
 \begin{frame}[t]
 \frametitle{Introduction}
-Intro content
+What motivated us to do this DSL?
+\pause
+\begin{itemize}
+\item Easier domain representation
+\pause
+\item Internal v. External DSL
+\end{itemize}
+\pause
+What is motivating our work?
+\pause
+\begin{itemize}
+\item Applying policy-centric usage management dynamically, incorporating into network fabrics
+\pause
+\item Providing attribution and query capabilities to policies and licensure
+\pause
+\item Creating dynamic flexible policy environments
+\end{itemize}
+\pause
+\textbf{We think this DSL will help is in our longer term goals.}
 \end{frame}
 
 \section{Design}
@@ -118,7 +136,7 @@ Notional Use:
 \end{columns}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Design --- Use Cases}
 \begin{columns}[t]
 \column{.5\textwidth}
@@ -133,7 +151,7 @@ Use Cases:
 \end{columns}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Design --- Domain Model}
 \begin{columns}[t]
 \column{.5\textwidth}
@@ -153,7 +171,7 @@ Interactions are described by specific \textit{usage semantics} embodied in the 
 \end{columns}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Design --- Usage Semantics}
 \begin{columns}[t]
 \column{.5\textwidth}
@@ -174,7 +192,7 @@ The association between an \textit{activity} and a \textit{restricted activity} 
 \end{frame}
 
 \section{Implementation}
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Implementation --- Lifecycle}
 Typical DSL Lifecycle: \\
 \begin{center}
@@ -230,19 +248,19 @@ Classification $\rightarrow$ \{TopSecret, Secret, Confidential, Unclassified\} $
 \lstinputlisting[]{content/code/policy/property_1.pol}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Implementation --- Properties}
 \lstinputlisting[]{content/code/policy/property_2.pol}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Implementation --- Entity, Context}
 \lstinputlisting[]{content/code/policy/entity.pol}
 \pause
 \lstinputlisting[]{content/code/policy/context.pol}
 \end{frame}
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Implementation --- Activities, Constraints}
 \lstinputlisting[]{content/code/policy/activity_1.pol}
 \pause
@@ -250,13 +268,24 @@ Classification $\rightarrow$ \{TopSecret, Secret, Confidential, Unclassified\} $
 \end{frame}
 
 
-\begin{frame}{t}
+\begin{frame}[t]
 \frametitle{Implementation --- Policies}
 \lstinputlisting[]{content/code/policy/policy_1.pol}
 \pause
 \lstinputlisting[]{content/code/policy/policy_2.pol}
 \end{frame}
 
+\begin{frame}[t]
+\frametitle{Implementation - Interface}
+\begin{itemize}
+\item<2-> {\bf permissions?()}. Returns the set of permissions for a given policy.
+\item<3-> {\bf obligations?(a)}. Returns the set of all obligations associated with a given permission. 
+\item<4-> {\bf remaining\_obligations(a)}. Returns the set of remaining obligations for a given permission. 
+\item<5-> {\bf remaining\_count(a)}. Returns the set of remaining count for a given permission. 
+\item<6-> {\bf allowed?(a, ctx)}. A boolean function that returns {\em true/false} whether a given activity can be carried out under a given context. 
+\item<7-> {\bf reset()}. Resets the policy by resetting its state. 
+\end{itemize}
+\end{frame}
 
 \section{Application}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -374,16 +403,25 @@ Classification $\rightarrow$ \{TopSecret, Secret, Confidential, Unclassified\} $
     \end{itemize}
 \end{frame}
 
-
-
-
-
-\begin{frame}{t}
-\frametitle{Sample --- Thing}
-\begin{columns}[t]
-\column{.5\textwidth}
-\column{.5\textwidth}
-\end{columns}
+\begin{frame}[t]
+\frametitle{Conclusions}
+\pause
+\begin{itemize}
+\item Internal DSLs are convenient, but probably not appropriate for real systems
+\pause
+\item Overall we like the DSL but could do without some of the Ruby cruft (e.g. \textbf{do...end}, etc.)
+\pause
+\item Application and Optimization
+\end{itemize}
+\pause
+Questions?
+\newline
+\newline
+Chris Lamb: cclamb@ece.unm.edu \\
+Pramod Jamkhedkar: pramod54@ece.unm.edu \\
+Greg Heileman: heileman@ece.unm.edu \\
+Mathew P. Bohnsack: bohnsack@gmail.com \\
+Viswanath Nandina: vishu@ece.unm.edu
 \end{frame}
 
 \end{document}
